@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+#source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0'
@@ -39,7 +39,7 @@ group :development, :test do
   # RSpec guard allows to automatically & intelligently launch specs when files are modified.
   gem 'guard-rspec', '2.5.0'
   # This plugin is for running spork in Ruby-on-Rails applications.
-  gem 'spork-rails', github: 'sporkrb/spork-rails'
+  #gem 'spork-rails', github: 'sporkrb/spork-rails'
   #Guard::Spork allows to automatically & intelligently start/reload your RSpec/Cucumber/Test::Unit Spork server(s).
   gem 'guard-spork', '1.5.0'
   # This gem aims at being a simple and reliable solution for controlling external programs running in the background on any Ruby / OS combination.
@@ -53,7 +53,7 @@ group :test do
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.4.0', :require => false
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  #gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'growl', '1.0.3'
   gem 'debugger'
 end
