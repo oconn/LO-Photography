@@ -1,0 +1,25 @@
+<% provide(:title, "Blog") %>
+<h1>Blog</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+ 
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.text %></td>
+    <td><%= link_to 'Show', post_path(post) %></td>
+    <% if current_user && current_user.admin? %>
+      <td><%= link_to 'Edit', edit_post_path(post) %></td>
+      <td><%= link_to 'Destroy', post_path(post),
+                   method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,38 @@
+<% provide(:title, "New Post") %>
+<div class="row">
+  <div class="span6 offset3">
+    <div class="form-wrap">	
+    	<h2>New Post</h2>
+			<%= form_for :post, url: posts_path do |f| %>
+			  <% if @post.errors.any? %>
+          <div id="errorExplanation">
+            <p class="alert"><%= pluralize(@post.errors.count, "error") %> 
+            	prohibited this post from being saved:
+            </p>
+            <ul>
+              <% @post.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+			  <div>
+			    <%= f.label :title %>
+			    <%= f.text_field :title %>
+			  </div><br />
+			 
+			  <div>
+			    <%= f.label :text %>
+			    <%= f.text_area :text %>
+			  </div></br />
+			 
+			  <div>
+			    <%= f.submit "Submit Post", class: "btn btn-primary" %>
+			  </div>
+			<% end %>
+		</div>
+	</div>
+</div>
+
+<%= link_to 'Back', posts_path %>

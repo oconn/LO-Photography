@@ -1,0 +1,37 @@
+<% provide(:title, "Edit Post") %>
+<div class="row">
+  <div class="span6 offset3">
+    <div class="form-wrap">
+      <h2>Edit post</h2> 
+      <%= form_for :post, url: post_path(@post.id), method: :patch do |f| %>
+        <% if @post.errors.any? %>
+        <div id="errorExplanation">
+          <p class="alert"><%= pluralize(@post.errors.count, "error") %> 
+            prohibited this post from being saved:
+          </p>
+          <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+        <% end %>
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </p>
+       
+        <p>
+          <%= f.label :text %><br>
+          <%= f.text_area :text %>
+        </p>
+       
+        <p>
+          <%= f.submit %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
+       
+<%= link_to 'Back', posts_path %>

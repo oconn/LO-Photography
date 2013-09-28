@@ -1,3 +1,31 @@
 LOG:  database system was shut down at 2013-09-27 12:32:35 HST
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+ERROR:  permission denied for relation schema_migrations
+STATEMENT:  SELECT "schema_migrations".* FROM "schema_migrations"
+FATAL:  database "lo_photo" does not exist
+ERROR:  role "lo_photo" already exists
+STATEMENT:  create role lo_photo login createdb;
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-09-27 13:09:09 HST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  permission denied for relation schema_migrations
+STATEMENT:  SELECT "schema_migrations".* FROM "schema_migrations"
+ERROR:  must be owner of database app_development
+STATEMENT:  DROP DATABASE IF EXISTS "app_development"
+ERROR:  must be owner of database app_test
+STATEMENT:  DROP DATABASE IF EXISTS "app_test"
+ERROR:  database "app_development" already exists
+STATEMENT:  CREATE DATABASE "app_development" ENCODING = 'unicode'
+ERROR:  database "app_test" already exists
+STATEMENT:  CREATE DATABASE "app_test" ENCODING = 'unicode'
+ERROR:  database "app_development" already exists
+STATEMENT:  CREATE DATABASE "app_development" ENCODING = 'unicode'
+ERROR:  database "app_test" already exists
+STATEMENT:  CREATE DATABASE "app_test" ENCODING = 'unicode'
+ERROR:  column "user_id" does not exist
+STATEMENT:  CREATE  INDEX  "index_comments_on_user_id" ON "comments"  ("user_id")
