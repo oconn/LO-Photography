@@ -1,3 +1,71 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* *** Index *** */
+
+h1.blog-title,
+h2.post-title,
+h3.post-time {
+	text-align: center;
+}
+h1.blog-title {
+	margin-bottom: 1em;
+}
+
+h2.post-title {
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0.5em;
+}
+h3.post-time {
+  font-size: 1.4em;
+  margin: 0 auto 1em auto;
+  padding: 0 auto;
+}
+
+div.markdown {
+	p {
+    text-indent: 1.5em;
+	}
+
+	p + p {
+    text-indent: 1.5em;
+  }
+
+	blockquote {
+  background: gray;
+  border-left: 10px solid black;
+  margin: 1em auto;
+  padding: 0.4em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  border-radius: 1em;
+  width:75%;
+
+    p {
+    	font-size: 1.2em;
+    	line-height: 1em;
+    	padding: 0;
+    	margin: 0;
+    	text-indent: 2em;
+    }
+  }
+  blockquote:before {
+    color: white;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote:after {
+    color: white;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 95%;
+    vertical-align: -0.4em;
+  }
+}
+
+

@@ -1,8 +1,8 @@
 <% provide(:title, "Edit Post") %>
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span10 offset1">
     <div class="form-wrap">
-      <h2>Edit post</h2> 
+      <h2 class="form-title">Edit post</h2> 
       <%= form_for :post, url: post_path(@post.id), method: :patch do |f| %>
         <% if @post.errors.any? %>
         <div id="errorExplanation">
@@ -23,11 +23,11 @@
        
         <p>
           <%= f.label :text %><br>
-          <%= f.text_area :text %>
+          <%= f.text_area :text, rows: "16" %>
         </p>
        
         <p>
-          <%= f.submit %>
+          <%= f.submit "Edit", class: "btn btn-primary" %>
         </p>
       <% end %>
     </div>

@@ -1,0 +1,16 @@
+<% @posts.each do |post| %>
+  <h2 class="post-title"><%= post.title %></h1>
+  <h3 class="post-time"><%= post.created_at.strftime("%B %d, %Y") %></h3>
+  
+  <div class="markdown">
+    <%= markdown(post.text) %>
+  </div>
+  <div class="sed">
+    <%= link_to 'Show', post_path(post) %>
+    <% if current_user && current_user.admin? %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Delete', post_path(post),
+                   method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </div>
+<% end %>

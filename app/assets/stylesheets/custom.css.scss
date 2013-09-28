@@ -17,6 +17,10 @@ hr {
 	height:2px;
 }
 
+h1.page-title {
+  text-align: center;
+}
+
 /* *** Forms *** */
 
 form {
@@ -65,6 +69,10 @@ input {
   @extend .error;
 }
 
+h2.form-title {
+  text-align: center;
+}
+
 /* *** Flash messages *** */
 
 .notice {
@@ -91,6 +99,15 @@ border-radius: 4px;
   border-radius: 4px;
 }
 /* *** Miscellaneous *** */
+// Show Edit Delete
+div.sed {
+  margin: 1em auto;
+  a {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+}
 
 .debug_dump {
   clear: both;

@@ -1,8 +1,8 @@
 <% provide(:title, "#{@post.title}") %>
-<h1>L.O. Photography</h1>
+<h1 class="blog-title">L.O. Photography</h1>
 
-<h2 class="post_title"><%= @post.title %></h1>
-<h3 class="post_time"><%= @post.created_at.strftime("%B %d, %Y") %></h3>
+<h2 class="post-title"><%= @post.title %></h1>
+<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y") %></h3>
 
 <div class="row">
   <div class="span8 offset2">
@@ -12,17 +12,15 @@
   </div>
 </div>
 
-
-<h2>Comments</h2>
 <%= render @post.comments %>
 
 <div class="row">
   <div class="span6 offset3">
     <div class="form-wrap"> 
-			<h2>Add a comment:</h2>
+			<h3>Add a comment:</h3>
 			<%= form_for([@post, @post.comments.build]) do |f| %>
 			  <div>
-			    <%= f.label :body %>
+			    <%= f.label :body, "Comment" %>
 			    <%= f.text_area :body %>
 			  </div><br />
 			  

@@ -1,8 +1,8 @@
 <% provide(:title, "New Post") %>
 <div class="row">
-  <div class="span6 offset3">
+  <div class="span10 offset1">
     <div class="form-wrap">	
-    	<h2>New Post</h2>
+    	<h2 class="form-title">New Post</h2>
 			<%= form_for :post, url: posts_path do |f| %>
 			  <% if @post.errors.any? %>
           <div id="errorExplanation">
@@ -24,7 +24,7 @@
 			 
 			  <div>
 			    <%= f.label :text %>
-			    <%= f.text_area :text %>
+			    <%= f.text_area :text, rows: "16" %>
 			  </div></br />
 			 
 			  <div>
