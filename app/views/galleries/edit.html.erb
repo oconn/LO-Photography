@@ -1,0 +1,32 @@
+<% provide(:title, "Edit Gallery") %>
+<h1 class="page-title">Edit Gallery</h1>
+ 
+<div class="row">
+  <div class="span6 offset3"> 
+    <div class="form-wrap">
+      <%= form_for :gallery, url: gallery_path(@gallery.id), method: :patch do |f| %>
+        <%= render 'gallery_errors' %>
+        
+        <div>
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div><br />
+       
+        <div>
+          <%= f.label :description %>
+          <%= f.text_field :description %>
+        </div></br />
+
+        <div>
+          <%= f.label :preview_image %>
+          <%= f.file_field :preview_image %>
+        </div><br />
+       
+        <div>
+          <%= f.submit "Submit Gallery", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= link_to 'Back', galleries_path, class: "btn" %>

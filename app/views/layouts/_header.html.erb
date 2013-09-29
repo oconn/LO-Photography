@@ -13,6 +13,17 @@
         <nav>
           <ul class="nav pull-left">
             <% if current_user && current_user.admin? %>
+              <li class="dropdown <%='active' if current_page?(galleries_path) | current_page?(new_gallery_path) %>">
+                <%= link_to 'Gallery <b class="caret"></b>'.html_safe, "#", :data => {:toggle=>"dropdown"}, :class => "dropdown-toggle" %>
+                <ul class="dropdown-menu", role="menu" aria-labelledby="dLabel">
+                  <li><%= link_to "New Gallery", new_gallery_path %></li>
+                  <li><%= link_to "Galleries", galleries_path %></li>
+                </ul>
+              </li>
+            <% else %>
+              <li class="<%='active' if current_page?(galleries_path) %>"><%= link_to "Gallery", galleries_path %></li>
+            <% end %>
+            <% if current_user && current_user.admin? %>
               <li class="dropdown <%='active' if current_page?(posts_path) | current_page?(new_post_path) %>">
                 <%= link_to 'Blog <b class="caret"></b>'.html_safe, "#", :data => {:toggle=>"dropdown"}, :class => "dropdown-toggle" %>
                 <ul class="dropdown-menu", role="menu" aria-labelledby="dLabel">
