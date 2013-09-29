@@ -101,11 +101,12 @@ border-radius: 4px;
 /* *** Miscellaneous *** */
 // Show Edit Delete
 div.sed {
-  margin: 1em auto;
+  margin: 1em auto 4em auto;
   a {
-    width: 100%;
+    width: 5em;
     display: block;
     text-align: center;
+    margin: 1em auto;
   }
 }
 

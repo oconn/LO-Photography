@@ -1,9 +1,6 @@
 class PostsController < ApplicationController
   before_filter :verify_is_admin, only: [:new, :create, :edit, :update, :destroy]
   
-	def index
-	end
-
 	def new
 		@post = Post.new
 	end
@@ -23,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.page(params[:page]).per_page(3).order('created_at DESC')
   end
 
   def edit
