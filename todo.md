@@ -1,4 +1,3 @@
 TODO: 
 
-1) set up test env
-
+1) change name routes for blog

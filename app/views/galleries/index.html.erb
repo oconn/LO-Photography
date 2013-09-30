@@ -1,21 +1,25 @@
 <% provide(:title, "Gallery") %>
 <h1 class="page-title">Gallery</h1>
 <% @galleries.each do |gallery| %>
-    <div class="gallery-index-box">
-      <h2 class="gallery-index-title"><%= gallery.name %></h2>
-      <div class="gallery-index-image-box">
-        <%= image_tag gallery.preview_image.url(:original), :class => "gallery-index-img" %>
-      </div>
-      
-      <div class="show_edit_del_ul">
-        <div class="sed">
-          <%= link_to 'View', gallery_path(gallery), :class => "btn btn-primary" %>
-          <% if current_user && current_user.admin? %>
-            <%= link_to 'Edit', edit_gallery_path(gallery), :class => "btn" %>
-            <%= link_to 'Delete', gallery_path(gallery),
-                            method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
-          <% end %>
-        </ul>
-      </div> 
+  <div class="row">
+    <div class="span7">
+      <%= image_tag gallery.preview_image.url(:original), :class => "gallery-index-img" %>  
+
     </div>
+    <div class="span5">
+      <h2 class="gallery-title"><%= gallery.name %></h2>
+      <p><%= gallery.description %></p>
+      <div class="sed gallery-sed">
+        <%= link_to 'View Gallery', gallery_path(gallery), :class => "btn btn-primary" %>
+        <% if current_user && current_user.admin? %>
+          <%= link_to 'Edit', edit_gallery_path(gallery), :class => "btn" %>
+          <%= link_to 'Delete', gallery_path(gallery),
+                          method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <% unless gallery == @galleries.last %>
+    <hr class="gallery-hr" />
   <% end %>
+<% end %>

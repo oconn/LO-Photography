@@ -32,7 +32,8 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.find(params[:id])
  
     if @gallery.update(params[:gallery].permit(:name, 
-      	                                       :preview_image))
+      	                                       :preview_image,
+                                               :description))
       flash[:notice] = "Gallery updated"
       redirect_to @gallery
     else
@@ -51,7 +52,8 @@ class GalleriesController < ApplicationController
 
     def gallery_params
       params.require(:gallery).permit(:name, 
-      	                              :preview_image)
+      	                              :preview_image,
+                                      :description)
     end
 
     # Before filter(s)
