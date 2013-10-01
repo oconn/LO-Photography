@@ -2,9 +2,6 @@
   <h2 class="post-title"><%= post.title %></h1>
   <h3 class="post-time"><%= post.created_at.strftime("%B %d, %Y") %></h3>
   
-  <div class="markdown">
-    <%= markdown(post.text) %>
-  </div>
   <div class="sed">
     <%= link_to 'Show', post_path(post), class: "btn btn-primary" %>
     <% if current_user && current_user.admin? %>

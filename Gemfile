@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.0'
 # Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
-gem 'bootstrap-sass', '2.3.2.0'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 # An easy way to keep your users' passwords secure.
 gem 'bcrypt-ruby', '~> 3.0.0'
 # Pagination library that integrates with Ruby on Rails, Sinatra, Merb, DataMapper and Sequel.

@@ -11,10 +11,16 @@ body { padding-top: 60px; }
 }
 
 /* *** Topography *** */
-hr {
+hr.header-hr {
 	margin: 0.4em auto;
 	background-color: #010101;
 	height:2px;
+}
+
+hr {
+  background-color: #E0E0E0;
+  height: 1pt;
+  margin: 1.5em auto;
 }
 
 h1.page-title {
