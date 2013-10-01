@@ -1,11 +1,15 @@
 <% @posts.each do |post| %>
-  <h2 class="post-title"><%= post.title %></h1>
-  <h3 class="post-time"><%= post.created_at.strftime("%B %d, %Y") %></h3>
-  
+  <h2 class="post-title"><%= post.title %></h2>
+  <h3 class="post-time"><%= post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
+  <hr />
+  <%= image_tag post.cover_image.url(:original), :class => "img-responsive" %>
+  <div class="markdown">
+    <%= markdown(post.description) %>
+  </div>  
   <div class="sed">
-    <%= link_to 'Show', post_path(post), class: "btn btn-primary" %>
+    <%= link_to 'Read More', post_path(post), class: "btn btn-primary" %>
     <% if current_user && current_user.admin? %>
-      <%= link_to 'Edit', edit_post_path(post), class: "btn" %>
+      <%= link_to 'Edit', edit_post_path(post), class: "btn btn-warning" %>
       <%= link_to 'Delete', post_path(post),
                    method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
     <% end %>

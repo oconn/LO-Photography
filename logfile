@@ -46,3 +46,36 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2013-09-30 03:07:49 HST
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+ERROR:  cached plan must not change result type
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = $1 LIMIT 1
+ERROR:  value too long for type character varying(255)
+STATEMENT:  UPDATE "posts" SET "description" = $1, "updated_at" = $2 WHERE "posts"."id" = 8
+ERROR:  value too long for type character varying(255)
+STATEMENT:  UPDATE "posts" SET "description" = $1, "updated_at" = $2 WHERE "posts"."id" = 8
+ERROR:  cached plan must not change result type
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE "posts"."id" = $1 LIMIT 1
+ERROR:  database "app_dev" is being accessed by other users
+DETAIL:  There are 3 other sessions using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "app_dev"
+ERROR:  database "app_dev" already exists
+STATEMENT:  CREATE DATABASE "app_dev" ENCODING = 'unicode'
+ERROR:  canceling statement due to user request
+STATEMENT:  DROP TABLE "posts"
+ERROR:  database "app_dev" is being accessed by other users
+DETAIL:  There are 2 other sessions using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "app_dev"
+ERROR:  database "app_dev" already exists
+STATEMENT:  CREATE DATABASE "app_dev" ENCODING = 'unicode'
+ERROR:  canceling statement due to user request
+STATEMENT:  DROP TABLE "posts"
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-10-01 02:35:07 HST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down

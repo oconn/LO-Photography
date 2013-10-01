@@ -4,24 +4,25 @@
 
 /* *** Index *** */
 
-h1.blog-title,
-h2.post-title,
-h3.post-time {
-	text-align: center;
-}
 h1.blog-title {
-	margin-bottom: 1em;
+	text-align: center;
+  font-size: 2.4em;
+  margin: 0.2em auto 2em auto;
 }
 
 h2.post-title {
-  margin: 0 auto;
+  margin: 0.2em auto;
   padding: 0;
-  line-height: 1em;
+  font-size: 3em;  
 }
 h3.post-time {
-  font-size: 1.4em;
+  font-size: 1.2em;
   margin: 0 auto 1em auto;
   padding: 0 auto;
+}
+p.post-desc {
+  margin: 1em auto;
+  width: 90%;
 }
 
 div.markdown {

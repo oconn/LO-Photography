@@ -1,6 +1,4 @@
-@import "bootstrap";
-body { padding-top: 60px; }
-@import "bootstrap-responsive";
+body { padding-top: 70px; }
 
 /* mixins, variables, etc. */
 
@@ -110,7 +108,7 @@ border-radius: 4px;
 div.sed {
   margin: 1em auto 4em auto;
   a {
-    width: 5em;
+    width: 10em;
     display: block;
     text-align: center;
     margin: 1em auto;

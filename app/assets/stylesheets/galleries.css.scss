@@ -5,32 +5,17 @@
 div.gallery-sed {
 	a {
 		margin-left: 0;
-		width: 10em;
 	}
 }
 
 /* *** Media Queries *** */
 
 @media (max-width: 400px) {
-	div.gallery-sed {
-	a {
-		margin: 1em auto;
-	}
- }
- h2.gallery-title {
- 	text-align: center;
- }
-}
+
+}	
 
 @media (min-width: 401px) and (max-width: 767px) {
-  div.gallery-sed {
-	a {
-		margin: 1em auto;
-	}
- }
- h2.gallery-title {
- 	text-align: center;
- }
+ 
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

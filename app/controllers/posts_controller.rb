@@ -20,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all.page(params[:page]).per_page(6).order('created_at DESC')
+    @posts = Post.all.page(params[:page]).per_page(4).order('created_at DESC')
   end
 
   def edit
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
  
-    if @post.update(params[:post].permit(:title, :text))
+    if @post.update(params[:post].permit(:title, :text, :cover_image, :description))
       redirect_to @post
     else
       render 'edit'
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
 
 	private
 	  def post_params
-	  	params.require(:post).permit(:title, :text)
+	  	params.require(:post).permit(:title, :text, :cover_image, :description)
 	  end
 
 	  # Before filter(s)

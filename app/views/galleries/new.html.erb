@@ -1,29 +1,28 @@
 <% provide(:title, "New Gallery") %>
 <div class="row">
-  <div class="span6 offset3">
+  <div class="col-md-6 col-md-offset-3">
     <div class="form-wrap">	
     	<h2 class="form-title">New Gallery</h2>
 			<%= form_for :gallery, url: galleries_path do |f| %>
 				<%= render 'gallery_errors' %>
 
-	      <div>
+	      <div class="form-group">
 			    <%= f.label :name %>
 			    <%= f.text_field :name %>
-			  </div><br />
+			  </div>
 			 
-			  <div>
+			  <div class="form-group">
 			    <%= f.label :description %>
 			    <%= f.text_area :description, rows: "5" %>
-			  </div></br />
-
-			  <div>
-    	    <%= f.label :preview_image %>
-    	    <%= f.file_field :preview_image %>
-        </div><br />
-			 
-			  <div>
-			    <%= f.submit "Submit Gallery", class: "btn btn-primary" %>
 			  </div>
+
+			  <div class="form-group">
+    	    <%= f.label :preview_image, "Preview Image (750x350)" %>
+    	    <%= f.file_field :preview_image %>
+        </div>
+			 
+			   <%= f.submit "Submit Gallery", class: "btn btn-primary" %>
+			  
 			<% end %>
 		</div>
 	</div>

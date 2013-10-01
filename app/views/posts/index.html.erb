@@ -1,15 +1,46 @@
 <% provide(:title, "Blog") %>
-<h1 class="blog-title">L.O. Photography</h1>
-
-<div class="row">
-	<div class="col-lg-8">
-    <%= render 'posts/post' %>
-  </div>
-  <div class="col-lg-4">
-    <div class="well">
-      <h4>Blog Search</h4>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12">
+	    <h1 class="blog-title">L.O. Photography</h1>
     </div>
   </div>
-</div>
 
-<%= will_paginate @posts %>
+	<div class="row">
+		<div class="col-lg-8">
+	    <%= render 'posts/post' %>
+	  </div>
+	  
+	  <div class="col-lg-4">
+          <div class="well">
+            <h4>Blog Search</h4>
+            <div class="input-group">
+              <input type="text" class="form-control">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button"><i class="icon-search"></i></button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /well -->
+          <div class="well">
+            <h4>Blog Categories</h4>
+              <div class="row">
+                <div class="col-lg-6">
+                  <ul class="list-unstyled">
+                    
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <ul class="list-unstyled">
+                    
+                  </ul>
+                </div>
+              </div>
+          </div><!-- /well -->
+          <div class="well">
+            <h4>Side Widget Well</h4>
+          </div><!-- /well -->
+        </div>
+      </div>
+
+	<%= will_paginate @posts %>
+</div>	

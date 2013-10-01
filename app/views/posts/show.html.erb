@@ -2,7 +2,7 @@
 <h1 class="blog-title">L.O. Photography</h1>
 
 <h2 class="post-title"><%= @post.title %></h1>
-<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y") %></h3>
+<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
 
 <div class="row">
   <div class="span8 offset2">
@@ -16,22 +16,23 @@
 <%= render @post.comments %>
 
 <div class="row">
-  <div class="span6 offset3">
+  <div class="col-md-6 col-md-offset-3">
     <div class="form-wrap"> 
 			<h3>Add a comment:</h3>
 			<%= form_for([@post, @post.comments.build]) do |f| %>
-			  <div>
+			  <div class="form-group">
 			    <%= f.label :body, "Comment" %>
 			    <%= f.text_area :body %>
-			  </div><br />
-			  
-        <div>
-			    <%= f.submit "Submit Comment", class: "btn btn-primary" %>
 			  </div>
+			  
+		    <%= f.submit "Submit Comment", class: "btn btn-primary" %>
+			 
 			<% end %>
 		</div>
 	</div>
 </div>
 
 <%= link_to 'Back', posts_path %>
-| <%= link_to 'Edit', edit_post_path(@post) %>
+<% if current_user && current_user.admin? %>
+  | <%= link_to 'Edit', edit_post_path(@post) %>
+<% end %>	

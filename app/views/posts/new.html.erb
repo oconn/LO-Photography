@@ -1,6 +1,6 @@
 <% provide(:title, "New Post") %>
 <div class="row">
-  <div class="span10 offset1">
+  <div class="col-md-10 col-md-offset-1">
     <div class="form-wrap">	
     	<h2 class="form-title">New Post</h2>
 			<%= form_for :post, url: posts_path do |f| %>
@@ -17,19 +17,28 @@
           </div>
         <% end %>
 
-			  <div>
+			  <div class="form-group">
 			    <%= f.label :title %>
 			    <%= f.text_field :title %>
-			  </div><br />
+			  </div>
 			 
-			  <div>
+			  <div class="form-group">
 			    <%= f.label :text %>
 			    <%= f.text_area :text, rows: "16" %>
-			  </div></br />
-			 
-			  <div>
-			    <%= f.submit "Submit Post", class: "btn btn-primary" %>
 			  </div>
+
+			  <div class="form-group">
+			    <%= f.label :description %>
+			    <%= f.text_area :description, rows: "5" %>
+			  </div>
+
+			  <div class="form-group">
+    	    <%= f.label :cover_image, "Preview Image (900x400)" %>
+    	    <%= f.file_field :cover_image %>
+        </div>
+			 
+			  <%= f.submit "Submit Post", class: "btn btn-primary" %>
+			 
 			<% end %>
 		</div>
 	</div>
