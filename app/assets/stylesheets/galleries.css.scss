@@ -4,28 +4,27 @@
 
 div.gallery-sed {
 	a {
-		margin-left: 0;
+		margin: 1em auto;
 	}
 }
 
 /* *** Media Queries *** */
 
-@media (max-width: 400px) {
-
-}	
-
-@media (min-width: 401px) and (max-width: 767px) {
- 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-	
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  div.gallery-sed {
+    a {
+		  margin-left: 0em;
+	  }
+  }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-
-}
-
+/* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  
 }
