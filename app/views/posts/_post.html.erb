@@ -6,6 +6,9 @@
   <div class="markdown">
     <%= markdown(post.description) %>
   </div>  
+  <p>
+    Tags: <%= raw post.tags.map { |t| link_to t.name, tag_path(t.name) }.join(', ') %>
+  </p>
   <div class="sed">
     <%= link_to 'Read More', post_path(post), class: "btn btn-primary" %>
     <% if current_user && current_user.admin? %>

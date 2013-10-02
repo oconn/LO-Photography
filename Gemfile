@@ -2,8 +2,7 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0'
-# Sass-powered version of Bootstrap, ready to drop right into your Sass powered applications.
-#gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
+
 # An easy way to keep your users' passwords secure.
 gem 'bcrypt-ruby', '~> 3.0.0'
 # Pagination library that integrates with Ruby on Rails, Sinatra, Merb, DataMapper and Sequel.
@@ -28,6 +27,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 # Used for user authentication
 gem "devise", "~> 3.1.0"
+# A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
+gem 'acts-as-taggable-on'
 
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes

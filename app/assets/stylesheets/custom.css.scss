@@ -61,10 +61,11 @@ input {
   height: auto !important;
 }
 
-#error_explanation {
-  color: #f00;
+#errorExplanation {
+  color: #fff ;
   ul {
     list-style: none;
+    text-shadow: 1px 1px 1px #000;
     margin: 0 0 18px 0;
   }
 }

@@ -12,7 +12,7 @@ LoPhoto::Application.routes.draw do
   match '/help',        to: 'static_pages#help',        via: 'get'
   match '/about',       to: 'static_pages#about',       via: 'get'
   match '/information', to: 'static_pages#information', via: 'get'
-  
+  match 'tags/:tag',    to: 'posts#index',              via: 'get', as: :tag
 
 
 
