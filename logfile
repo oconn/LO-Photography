@@ -116,3 +116,41 @@ ERROR:  argument of OR must be type boolean, not type character varying at chara
 STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
 ERROR:  argument of OR must be type boolean, not type character varying at character 40
 STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  missing FROM-clause entry for table "post" at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY post.total_visits DESC LIMIT 5
+ERROR:  column posts.visit does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visit DESC LIMIT 5
+ERROR:  column posts.visit does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visit DESC LIMIT 5
+ERROR:  column "visit" does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY visit DESC LIMIT 5
+ERROR:  column "visit" does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY visit DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.total_visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.total_visits DESC LIMIT 5
+ERROR:  column posts.visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visits DESC LIMIT 5
+ERROR:  column posts.visit does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visit DESC LIMIT 5
+ERROR:  column posts.visit does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visit DESC LIMIT 5
+ERROR:  missing FROM-clause entry for table "post" at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY post.visit DESC LIMIT 5
+ERROR:  missing FROM-clause entry for table "post" at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY post.visit DESC LIMIT 5
+ERROR:  column posts.visit does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visit DESC LIMIT 5
+ERROR:  column posts.visits does not exist at character 43
+STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visits DESC LIMIT 5

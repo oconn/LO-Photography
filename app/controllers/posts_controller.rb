@@ -17,6 +17,7 @@ class PostsController < ApplicationController
 
 	def show
     @post = Post.friendly.find(params[:id])
+    Visit.track(@post, request.remote_ip)
   end
 
   def index

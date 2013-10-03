@@ -2,6 +2,8 @@ class Post < ActiveRecord::Base
 	extend FriendlyId
 	has_many :comments, dependent: :destroy
 	acts_as_taggable
+	
+	has_one :visit, :as => :visitable
 
 	has_attached_file :cover_image, 
 	                  :styles => { :original => "900x400>" }, 
@@ -15,7 +17,7 @@ class Post < ActiveRecord::Base
   friendly_id :title, :use => [:slugged]
 
   def self.search(search, page)
-    paginate :per_page => 5, :page => page,
+    paginate :per_page => 4, :page => page,
              :conditions => ['title ilike ? or description ilike ?', ["%#{search}%"]*2].flatten,
              :order => 'title'
   end
