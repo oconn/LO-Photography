@@ -16,23 +16,23 @@ class PostsController < ApplicationController
 	end
 
 	def show
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def index
     if params[:tag]
       @posts = Post.tagged_with(params[:tag]).page(params[:page]).per_page(4).order('created_at DESC')
     else  
-      @posts = Post.all.page(params[:page]).per_page(4).order('created_at DESC')
+      @posts = Post.search(params[:search], params[:page])
     end 
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
  
     if @post.update(params[:post].permit(:title, 
                                          :text, 
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
     @post.destroy
     flash[:notice] = "Post removed."
     redirect_to posts_path

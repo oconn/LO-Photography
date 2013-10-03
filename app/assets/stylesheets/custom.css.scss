@@ -79,6 +79,12 @@ h2.form-title {
   text-align: center;
 }
 
+div.search-div {
+  input {
+
+  }
+}
+
 /* *** Flash messages *** */
 
 .notice {
@@ -128,12 +134,16 @@ div.sed {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  .navbar-brand {
+    padding-right: 1em;
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+  .navbar-brand {
+    padding-right: 1em;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */

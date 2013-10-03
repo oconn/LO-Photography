@@ -86,3 +86,33 @@ LOG:  received smart shutdown request
 LOG:  autovacuum launcher shutting down
 LOG:  shutting down
 LOG:  database system is shut down
+LOG:  database system was shut down at 2013-10-02 03:08:04 HST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  type "sting" does not exist at character 39
+STATEMENT:  ALTER TABLE "posts" ADD COLUMN "slug" sting
+ERROR:  column "name" does not exist at character 40
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (name like '%%')  ORDER BY name LIMIT 5 OFFSET 0
+ERROR:  operator does not exist: character varying | text at character 46
+HINT:  No operator matches the given name and argument type(s). You might need to add explicit type casts.
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title | description like '%First%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "and" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like and description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "and" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like and description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "and" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like and description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "and" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like and description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "and" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like and description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "or" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "or" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  syntax error at or near "or" at character 51
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title like or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  argument of OR must be type boolean, not type character varying at character 40
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0
+ERROR:  argument of OR must be type boolean, not type character varying at character 40
+STATEMENT:  SELECT  "posts".* FROM "posts"  WHERE (title or description like '%%')  ORDER BY title LIMIT 5 OFFSET 0

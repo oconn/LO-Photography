@@ -29,7 +29,8 @@ gem 'jbuilder', '~> 1.2'
 gem "devise", "~> 3.1.0"
 # A tagging plugin for Rails applications that allows for custom tagging along dynamic contexts.
 gem 'acts-as-taggable-on'
-
+# Create human-friendly URL’s as if they were numeric ids for ActiveRecord models.
+gem 'friendly_id', '5.0.0.rc2'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

@@ -1,38 +1,40 @@
 <% provide(:title, "#{@post.title}") %>
-<h1 class="blog-title">L.O. Photography</h1>
+<div class="container">
+	<h1 class="blog-title">L.O. Photography</h1>
+	<h2 class="post-title"><%= @post.title %></h1>
+	<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
+	<hr />
+	<%= image_tag @post.cover_image.url(:original), :class => "img-responsive post-img" %>
+	<div class="row">
+	  <div class="span8 offset2">
+	    <div class="markdown">
+	      <%= markdown(@post.text) %>
+	    </div>
+	  </div>
+	</div>
+	<hr />
 
-<h2 class="post-title"><%= @post.title %></h1>
-<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
+	<%= render @post.comments %>
 
-<div class="row">
-  <div class="span8 offset2">
-    <div class="markdown">
-      <%= markdown(@post.text) %>
-    </div>
-  </div>
-</div>
-<hr />
-
-<%= render @post.comments %>
-
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <div class="form-wrap"> 
-			<h3>Add a comment:</h3>
-			<%= form_for([@post, @post.comments.build]) do |f| %>
-			  <div class="form-group">
-			    <%= f.label :body, "Comment" %>
-			    <%= f.text_area :body %>
-			  </div>
-			  
-		    <%= f.submit "Submit Comment", class: "btn btn-primary" %>
-			 
-			<% end %>
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+	    <div class="form-wrap"> 
+				<h3>Add a comment:</h3>
+				<%= form_for([@post, @post.comments.build]) do |f| %>
+				  <div class="form-group">
+				    <%= f.label :body, "Comment" %>
+				    <%= f.text_area :body %>
+				  </div>
+				  
+			    <%= f.submit "Submit Comment", class: "btn btn-primary" %>
+				 
+				<% end %>
+			</div>
 		</div>
 	</div>
-</div>
 
-<%= link_to 'Back', posts_path %>
-<% if current_user && current_user.admin? %>
-  | <%= link_to 'Edit', edit_post_path(@post) %>
-<% end %>	
+	<%= link_to 'Back', posts_path %>
+	<% if current_user && current_user.admin? %>
+	  | <%= link_to 'Edit', edit_post_path(@post) %>
+	<% end %>	
+</div>

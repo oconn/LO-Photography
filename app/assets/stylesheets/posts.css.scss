@@ -24,6 +24,9 @@ p.post-desc {
   margin: 1em auto;
   width: 90%;
 }
+img.post-img {
+  margin: 0 auto;
+}
 
 div.markdown {
 	p {
@@ -71,12 +74,31 @@ div.markdown {
 
 #tag_cloud {
   line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
+  .s { font-size: 1em; }
+  .m { font-size: 1.4em; }
   .l { font-size: 1.8em; }
   a {
     margin: 0.2em auto;
   }
 }
 
+a.all-link {
+  font-size: 1.6em;
+}
 
+/* *** Media Queries *** */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}
