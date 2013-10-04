@@ -154,3 +154,6 @@ ERROR:  column posts.visit does not exist at character 43
 STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visit DESC LIMIT 5
 ERROR:  column posts.visits does not exist at character 43
 STATEMENT:  SELECT  "posts".* FROM "posts"   ORDER BY posts.visits DESC LIMIT 5
+LOG:  database system was shut down at 2013-10-03 02:39:43 HST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started

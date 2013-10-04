@@ -17,7 +17,9 @@
                    method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
     <% end %>
   </div>
-  <h2>Visits:</h2>
-  <p><span class="gray">Total:</span><%= post.visit.total_visits rescue 0 %></p>
-  <p><span class="gray">Unique:</span><%= post.visit.unique_visits rescue 0 %></p>
+  <% if current_user && current_user.admin? %>
+    <h2>Visits:</h2>
+    <p><span class="gray">Total:</span><%= post.visit.total_visits rescue 0 %></p>
+    <p><span class="gray">Unique:</span><%= post.visit.unique_visits rescue 0 %></p>
+  <% end %>
 <% end %>
