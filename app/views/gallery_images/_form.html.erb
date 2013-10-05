@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="form-wrap">
+      <h2 class="form-title">New Image</h2>
+      <%= form_for [@gallery, @gallery.gallery_images.build], :html => { :multipart => true } do |f| %>
+        <% if @gallery.gallery_images.build.errors.any? %>
+          <div id="error_explanation">
+            <div class="alert alert-error">
+              The form contains <%= pluralize(@gallery.gallery_images.build.errors.count, "error") %>.
+            </div>
+            <ul>
+              <% @gallery.gallery_images.build.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.label :image, "Upload Image:" %>
+          <%= f.file_field :image %>
+        </div>
+
+         <%= f.submit "Upload Images:", class: "btn btn-primary" %>
+      
+      <% end %>
+    </div>
+  </div>
+</div>
