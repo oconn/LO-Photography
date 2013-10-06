@@ -1,21 +1,11 @@
 <% provide(:title, "#{@gallery.name}") %>
 <h1 class="page-title"><%= @gallery.name %></h1>
 
-<% @gallery.gallery_images.each do |gallery| %>
-    <div class="gallery-image">
-      <%= image_tag gallery.image.url(:small), :class => "gallery_img" %> 
-      <% if current_user && current_user.admin? %>
-        <ul>
-          <li>
-            <%= link_to 'Remove Image', gallery_path(gallery.image),
-                       method: :delete,
-                       data: { confirm: 'Are you sure?' },
-                       :class => "btn btn-mini btn-danger img-del" %>
-          </li>
-        </ul>
-      <% end %>
-    </div>
+<div class="row">
+  <%= render @gallery.gallery_images %>
+</div>
+<% if current_user && current_user.admin? %>
+  <%= render "gallery_images/form" %>
 <% end %>
-<%= render "gallery_images/form" %>
 
 <%= link_to 'Back', galleries_path, class: "btn" %>

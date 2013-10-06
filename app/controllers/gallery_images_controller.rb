@@ -17,6 +17,7 @@ class GalleryImagesController < ApplicationController
     @gallery = Gallery.find(params[:gallery_id])
     @image = @gallery.gallery_images.find(params[:id])
     @image.destroy
+    flash[:notice] = "Image removed."
     redirect_to gallery_path(@gallery)
   end
 

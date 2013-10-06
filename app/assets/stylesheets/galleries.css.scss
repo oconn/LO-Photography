@@ -3,10 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 div.gallery-sed {
+	margin: 0 auto;
 	a {
 		margin: 1em auto;
 	}
 }
+
+.gallery_img {
+	margin: 1em auto;
+    img {  
+    }
+  }
+
 
 /* *** Media Queries *** */
 
@@ -17,11 +25,8 @@ div.gallery-sed {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  div.gallery-sed {
-    a {
-		  margin-left: 0em;
-	  }
-  }
+  
+ 
 }
 
 /* Large devices (large desktops, 1200px and up) */
