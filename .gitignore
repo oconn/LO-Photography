@@ -22,3 +22,4 @@ bundler_stubs/
 
 # Ignore paperclip files in dev
 /public/system/
+logfile
