@@ -31,6 +31,8 @@ gem "devise", "~> 3.1.0"
 gem 'acts-as-taggable-on'
 # Create human-friendly URL’s as if they were numeric ids for ActiveRecord models.
 gem 'friendly_id', '5.0.0.rc2'
+# This gem is a Rails plugin for adding a Pinterest.com "Pin It" button to your views.
+gem 'pin_it'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

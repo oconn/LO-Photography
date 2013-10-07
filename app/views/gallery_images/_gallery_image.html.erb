@@ -1,6 +1,10 @@
 <div class="col-md-3">
   <div class="gallery_img">
-    <%= image_tag gallery_image.image.url(:thumb), :class => "img-responsive" %> 
+    <%= link_to("#{image_tag gallery_image.image.url(:thumb), class: "img-responsive gallery_img"}".html_safe, gallery_image.image.url(:large)) %> 
+    <%= pin_it_button :media => gallery_image.image.url(:thumb),
+                      :description => "L.O. Photography: #{@gallery.name} - #{gallery_image.image_file_name}",
+                      :url => gallery_image.image.url(:thumb),
+                      :count_layout => 'vertical' %>
   </div>
   <% if current_user && current_user.admin? %>
     <div class="sed gallery-sed">
