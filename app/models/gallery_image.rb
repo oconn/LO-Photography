@@ -2,9 +2,7 @@ class GalleryImage < ActiveRecord::Base
 	belongs_to :gallery
 
   has_attached_file :image, 
-	                  :styles => { :original => "3000x3000>",
-	                               :large => "1600x1600>",
-	                               :small => "800x800>",
+	                  :styles => { :original => "1600x1600>",
 	                               :thumb => "300x300#" }, 
 	                  :default_url => "/images/:style/missing.png"
 
