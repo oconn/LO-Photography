@@ -1,0 +1,5 @@
+<h1 class="page-title">User Gallery Index</h1>
+<% if current_user && current_user.admin? %>
+<%= link_to "New Gallery", new_user_user_gallery_path %> 
+<% end %> 
+<%= link_to "New Gallery", new_user_user_gallery_path %>

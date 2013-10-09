@@ -1,5 +1,9 @@
 LoPhoto::Application.routes.draw do
   devise_for :users
+  
+  resources :users do
+    resources :user_galleries
+  end
 
   resources :galleries do
     resources :gallery_images 

@@ -82,9 +82,10 @@ div.markdown {
 
 a.all-link {
   font-size: 1.6em;
+  text-decoration: underline;
 }
 
-ul.newest-articals {
+ul.newest-articles {
   list-style: none;
   padding: 0em;
   li {
@@ -99,7 +100,7 @@ ul.newest-articals {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-  ul.newest-articals {
+  ul.newest-articles {
     li {
       font-size: 1.4em;
       margin: 0.2em auto;
@@ -111,7 +112,11 @@ ul.newest-articals {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-
+  .well {
+    h3 {
+      font-size: 1.4em;
+    }
+  }
   
 }
 
