@@ -1,2 +1,16 @@
 <% provide(:title, @user.email) %>
 <%= @user.email %>
+
+<% @user_galleries.each do |gallery| %>
+  <div class="col-md-3">
+    <h3><%= gallery.name %><h3>
+    <%= image_tag gallery.preview_image.url(:original), :class => "img-responsive" %>
+	  <% if current_user && current_user.admin? %>
+	    <%= link_to 'Remove Gallery', [@user, gallery],
+	                     :controller => "user_galleries",
+	                     method: :delete,
+	                     data: { confirm: 'Are you sure?' },
+	                     :class => "btn btn-mini btn-danger img-del" %>
+    <% end %>
+  </div>
+<% end %>

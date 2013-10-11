@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :verify_is_admin, only: [:index]
+  before_filter :authenticate_user!
 
 	def index
 		@users = User.all.page(params[:page]).per_page(20).order("email ASC")
@@ -7,6 +8,7 @@ class UsersController < ApplicationController
 
 	def show 
     @user = User.find(params[:id])
+    @user_galleries = UserGallery.all :conditions => ['user_id >= ?', @user]
   end
 
   private
