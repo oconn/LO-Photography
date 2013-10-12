@@ -1,22 +1,12 @@
-<h1 class="page-title">User Gallery Index</h1>
+<h1 class="page-title">All Galleries</h1>
 <div class="row">
 	<% @user_galleries.each do |gallery| %>
 	  <div class="col-md-3">
-	    <h3><%= gallery.name %><h3>
+	    <h3 class="gallery-name"><%= gallery.name %><h3>
 	    <%= image_tag gallery.preview_image.url(:original), :class => "img-responsive" %>
-	    <% if current_user && current_user.admin? %>
-		    <%= link_to 'Remove Gallery', [gallery.user, gallery],
-	                       method: :delete,
-	                       data: { confirm: 'Are you sure?' },
-	                       :class => "btn btn-mini btn-danger img-del" %>
-	    <% end %>
 	  </div>
 	<% end %>
 </div>
+<%= link_to 'Back', current_user, class: "btn btn-primary" %>
 
-<ul>
-  <li><%= link_to 'Back', current_user %></li>
-  <% if current_user && current_user.admin? %>
-    <li><%= link_to "New Gallery", new_user_user_gallery_path %></li> 
-  <% end %> 
-</ul>
+

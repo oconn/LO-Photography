@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :verify_is_admin, only: [:index]
+  before_filter :verify_is_admin, only: [:index, :destroy]
   before_filter :authenticate_user!
 
 	def index
@@ -8,7 +8,14 @@ class UsersController < ApplicationController
 
 	def show 
     @user = User.find(params[:id])
-    @user_galleries = UserGallery.all :conditions => ['user_id >= ?', @user]
+    @user_galleries = UserGallery.all :conditions => ['user_id = ?', @user]
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    flash[:notice] = "#{@user} removed."
+    redirect_to users_path
   end
 
   private

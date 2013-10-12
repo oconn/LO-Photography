@@ -1,11 +1,22 @@
 <% provide(:title, "New User Gallery" ) %>
-<h1>New User Gallery</h1>
-
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class="form-wrap">
+      <h2 class="form-title">New User Gallery</h2>
       <%= form_for :user_gallery, url: user_user_galleries_path do |f| %>
-    	  
+    	  <% if @user_gallery.errors.any? %>
+          <div id="errorExplanation">
+            <p class="alert"><%= pluralize(@user_gallery.errors.count, "error") %> 
+              prohibited this post from being saved:
+            </p>
+            <ul>
+              <% @user_gallery.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+
         <div class="form-group">
     	  <%= f.label :name, "Gallery Name" %>
     	  <%= f.text_field :name %>

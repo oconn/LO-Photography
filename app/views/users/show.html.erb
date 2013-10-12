@@ -1,16 +1,25 @@
 <% provide(:title, @user.email) %>
-<%= @user.email %>
-
-<% @user_galleries.each do |gallery| %>
-  <div class="col-md-3">
-    <h3><%= gallery.name %><h3>
-    <%= image_tag gallery.preview_image.url(:original), :class => "img-responsive" %>
-	  <% if current_user && current_user.admin? %>
-	    <%= link_to 'Remove Gallery', [@user, gallery],
-	                     :controller => "user_galleries",
-	                     method: :delete,
-	                     data: { confirm: 'Are you sure?' },
-	                     :class => "btn btn-mini btn-danger img-del" %>
-    <% end %>
-  </div>
+<h2><%= @user.email %></h2>
+<div class="row">
+	<% @user_galleries.each do |gallery| %>
+	  <div class="col-md-3">
+	    <h3 class="gallery-name"><%= gallery.name %><h3>
+	    <div class="sed">
+		    <%= link_to("#{image_tag gallery.preview_image.url(:original), :class => "img-responsive"}".html_safe, [@user, gallery]) %>
+			  <% if current_user && current_user.admin? %>
+			    <%= link_to "Edit Gallery", edit_user_user_gallery_path(@user, gallery.id), class: "btn btn-primary" %>
+			    <%= link_to 'Remove Gallery', [@user, gallery],
+			                     :controller => "user_galleries",
+			                     method: :delete,
+			                     data: { confirm: 'Are you sure?' },
+			                     :class => "btn btn-mini btn-danger img-del" %>
+		    <% end %>
+		  </div>
+	  </div>
+	<% end %>
+</div>
+<% if @user_galleries.blank? %>
+  <h3>Welcome To L.O. Photography.</h3>
+  <p>This is where your custom portrait galleries will display after all the hard work is put into post processing you session. Post processing will take up to 6 days depending on demand.</p>
+  <p>If you have not booked a session <%= link_to "click here", information_path %> to get started!</p>
 <% end %>

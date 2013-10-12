@@ -2,7 +2,77 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 ul.all-users {
+	width:100%;
+	display: table;
 	li {
 	  list-style: none;	
+    width: 100%;
+    display: inline-table;
+	  a {
+	  	margin: 1em auto;
+	  	display: table;
+	  }
+	  a.u-name-link {
+    	&:hover {
+    		color: pink;
+    		text-decoration: none;
+    	} 
+    }
   }
+}
+
+/* *** Media Queries *** */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+	ul.all-users {
+		width:100%;
+		display: table;
+		li {
+		  list-style: none;	
+	    width: 50%;
+	    display: inline-table;
+		  a {
+		  	margin: 1em auto;
+		  	display: table;
+		  }
+		  a.u-name-link {
+	    	&:hover {
+	    		color: pink;
+	    		text-decoration: none;
+	    	} 
+	    }
+	  }
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+  ul.all-users {
+		width:100%;
+		display: table;
+		li {
+		  list-style: none;	
+	    width: 25%;
+	    display: inline-table;
+		  a {
+		  	margin: 1em auto;
+		  	display: table;
+		  }
+		  a.u-name-link {
+		  	display: block;
+	    	&:hover {
+	    		color: pink;
+	    		text-decoration: none;
+	    	} 
+	    }
+	  }
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
 }

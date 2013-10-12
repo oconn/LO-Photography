@@ -5,8 +5,8 @@ class UserGalleriesController < ApplicationController
     if signed_in?
       if current_user.admin?
         @user_galleries = UserGallery.all 
-      elsif current_user
-		    @user_galleries = UserGallery.all :conditions => ['user_id >= ?', current_user]  
+      else current_user
+		    @user_galleries = UserGallery.all :conditions => ['user_id = ?', current_user]  
       end
     else
       redirect_to root_path, notice: "Please sign in."
@@ -15,36 +15,50 @@ class UserGalleriesController < ApplicationController
 	end
 
 	def new
-		if signed_in?
-		  @user = User.find(params[:user_id])
-		else 
-			redirect_to(root_url)
-		end
+		@user_gallery = UserGallery.new
 	end
 
 	def create
-    if signed_in?
-      @user = User.find(params[:user_id])
-      @user_gallery = @user.user_galleries.create(user_gallery_params)
-      redirect_to user_path(@user)
+    @user = User.find(params[:user_id])
+    @user_gallery = @user.user_galleries.new(user_gallery_params)
+
+    if @user_gallery.save
+      redirect_to @user
     else
-      @user = User.find(params[:id])
-      redirect_to signin_url, notice: "Please sign in."
-      session[:return_to] = user_path(@user)
+      render 'new'
     end
   end
 
   def show 
-    @user = User.find(params[:id])
-    @user_gallery = UserGallery.find(params[:id])
+    @user = User.find(params[:user_id])
+    @user_gallery = UserGallery.friendly.find(params[:id])
+  end
+
+  def edit
+    @user = User.find(params[:user_id])
+    @user_gallery = @user.user_galleries.friendly.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:user_id])
+    @user_gallery = @user.user_galleries.friendly.find(params[:id])
+
+    if @user_gallery.update(params[:user_gallery].permit(:name, 
+                                                         :preview_image,
+                                                         :description))
+      flash[:notice] = "Gallery Updated."
+      redirect_to @user
+    else
+      render 'edit'
+    end
   end
 
   def destroy
     @user = User.find(params[:user_id])
-    @user_gallery = UserGallery.find(params[:id])
+    @user_gallery = UserGallery.friendly.find(params[:id])
     @user_gallery.destroy
-    flash[:notice] = "Image removed."
-    redirect_to gallery_path(@gallery)
+    flash[:notice] = "Gallery removed."
+    redirect_to @user
   end
 
 
