@@ -1,7 +1,9 @@
 class UserGallery < ActiveRecord::Base
 	extend FriendlyId
-	belongs_to :user
 	friendly_id :name, :use => [:slugged]
+
+	belongs_to :user
+	has_many :user_images, dependent: :destroy
 
 	has_attached_file :preview_image, 
 	                  :styles => { :original => "300x300#" }, 

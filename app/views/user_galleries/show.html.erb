@@ -1,3 +1,27 @@
 <% provide(:title, "#{@user_gallery.name}") %>
 
+<div class="row">
+ <%= render @user_gallery.user_images %>
+</div>
+
+<% if current_user && current_user.admin? %>
+	<div class="row">
+	  <div class="col-md-6 col-md-offset-3">
+	    <div class="form-wrap">
+	      <h2 class="form-title">New Gallery Image</h2>
+
+				<%= form_for([@user, @user_gallery, @user_gallery.user_images.build]) do |f| %>
+				  <div class="form-group">
+				    <%= f.label :image, "Image" %>
+				    <%= f.file_field :image %>
+				  </div>
+				  
+				  <%= f.submit "Submit Comment", class: "btn btn-primary" %>
+				 
+				<% end %>
+			</div>
+		</div>
+	</div>
+<% end %>
+
 <%= link_to 'Back', user_path(@user.id), class: "btn btn-primary" %>

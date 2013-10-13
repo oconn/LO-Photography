@@ -1,4 +1,4 @@
-<% provide(:title, @user.email) %>
+<% provide(:title, @user.first_name) %>
 <h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
 <div class="row">
 	<% @user_galleries.each do |gallery| %>
