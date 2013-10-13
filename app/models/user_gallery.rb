@@ -6,7 +6,7 @@ class UserGallery < ActiveRecord::Base
 	has_many :user_images, dependent: :destroy
 
 	has_attached_file :preview_image, 
-	                  :styles => { :original => "300x300#" }, 
+	                  :styles => { :original => "600x400#" }, 
 	                  :default_url => "/images/:style/missing.png"
 
 	validates :name,          presence: true

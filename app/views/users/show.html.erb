@@ -2,10 +2,10 @@
 <h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
 <div class="row">
 	<% @user_galleries.each do |gallery| %>
-	  <div class="col-md-3">
+	  <div class="col-md-4">
 	    <h3 class="gallery-name"><%= gallery.name %><h3>
+	    <%= link_to("#{image_tag gallery.preview_image.url(:original), :class => "img-responsive user-gallery-preview"}".html_safe, [@user, gallery]) %>
 	    <div class="sed">
-		    <%= link_to("#{image_tag gallery.preview_image.url(:original), :class => "img-responsive"}".html_safe, [@user, gallery]) %>
 			  <% if current_user && current_user.admin? %>
 			    <%= link_to "Edit Gallery", edit_user_user_gallery_path(@user, gallery.id), class: "btn btn-primary" %>
 			    <%= link_to 'Remove Gallery', [@user, gallery],
