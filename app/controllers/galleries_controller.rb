@@ -21,15 +21,15 @@ class GalleriesController < ApplicationController
   end
 
   def show 
-  	@gallery = Gallery.find(params[:id])
+  	@gallery = Gallery.friendly.find(params[:id])
   end
 
   def edit
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
   end
 
   def update
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
  
     if @gallery.update(params[:gallery].permit(:name, 
       	                                       :preview_image,
@@ -42,7 +42,7 @@ class GalleriesController < ApplicationController
   end
   
   def destroy
-    @gallery = Gallery.find(params[:id])
+    @gallery = Gallery.friendly.find(params[:id])
     @gallery.destroy
     flash[:notice] = "Gallery removed."
     redirect_to galleries_path
