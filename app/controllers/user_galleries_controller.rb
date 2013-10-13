@@ -1,13 +1,9 @@
 class UserGalleriesController < ApplicationController
-	before_filter :verify_is_admin, only: [:new, :create, :edit, :update, :destroy]
+	before_filter :verify_is_admin, only: [:new, :create, :edit, :update, :destroy, :index]
 
 	def index
-    if signed_in?
-      if current_user.admin?
-        @user_galleries = UserGallery.all 
-      else current_user
-		    @user_galleries = UserGallery.all :conditions => ['user_id = ?', current_user]  
-      end
+    if current_user.admin?
+      @user_galleries = UserGallery.page(params[:page]).per_page(16).order('created_at DESC') 
     else
       redirect_to root_path, notice: "Please sign in."
       session[:return_to] = user_path(@user)

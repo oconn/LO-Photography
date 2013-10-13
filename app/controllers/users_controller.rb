@@ -28,4 +28,16 @@ class UsersController < ApplicationController
     def verify_is_admin
       (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
     end
+
+  protected
+
+  protected
+
+    def devise_parameter_sanitizer
+      if resource_class == User
+        User::ParameterSanitizer.new(User, :user, params)
+      else
+        super # Use the default one
+      end
+    end
 end
