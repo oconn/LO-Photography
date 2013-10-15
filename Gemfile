@@ -9,7 +9,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '3.0.4'
 # Image attachment libery using ImageMagick
 gem 'paperclip', '~> 3.0'
-# 
+# Amazon Web Services
 gem 'aws-sdk'
 #
 gem 'jquery-fileupload-rails'
