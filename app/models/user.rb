@@ -5,4 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :user_galleries, dependent: :destroy
+
+  validates :first_name, :presence => "true"
+  validates :last_name, :presence => "true"
 end
