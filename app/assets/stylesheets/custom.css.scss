@@ -64,8 +64,6 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
   margin-bottom: 15px;
   @include box_sizing;
-  background-color: #1f1f1f;
-  color: white;
 }
 
 label {
@@ -76,11 +74,8 @@ input {
   height: auto !important;
 }
 
-#errorExplanation {
-  color: #fff ;
+#error_explanation {
   ul {
-    list-style: none;
-    text-shadow: 1px 1px 1px #000;
     margin: 0 0 18px 0;
   }
 }

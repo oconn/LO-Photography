@@ -1,7 +1,6 @@
 <% provide(:title, "#{@post.title}") %>
 <div class="container">
-	<h1 class="page-title">L.O. Photography</h1>
-	<h2 class="post-title"><%= @post.title %></h1>
+	<h2 class="post-title"><%= @post.title %></h2>
 	<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
 	<hr />
 	<%= image_tag @post.cover_image.url(:original), :class => "img-responsive post-img" %>
@@ -33,7 +32,7 @@
 		</div>
 	</div>
 
-	<%= link_to 'Back', posts_path %>
+	<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
 	<% if current_user && current_user.admin? %>
 	  | <%= link_to 'Edit', edit_post_path(@post) %>
 	<% end %>	

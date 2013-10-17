@@ -5,10 +5,10 @@
     	<h2 class="form-title">New Post</h2>
 			<%= form_for :post, url: posts_path do |f| %>
 			  <% if @post.errors.any? %>
-          <div id="errorExplanation">
-            <p class="alert"><%= pluralize(@post.errors.count, "error") %> 
-            	prohibited this post from being saved:
-            </p>
+          <div id="error_explanation">
+            <div class="alert alert-error"> 
+            	This form contains <%= pluralize(@post.errors.count, "error") %>.
+            </div>
             <ul>
               <% @post.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
@@ -49,4 +49,4 @@
 	</div>
 </div>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path, class: "btn-primary btn" %>

@@ -27,6 +27,7 @@ class PostsController < ApplicationController
       @posts = Post.search(params[:search], params[:page]).per_page(3).order('created_at DESC')
     end 
     @newest = Post.order('created_at DESC').limit(5)
+    @popular = Post.joins(:visit).order('total_visits DESC').limit(5)
   end
 
   def edit

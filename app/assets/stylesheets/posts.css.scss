@@ -88,7 +88,7 @@ a.all-link {
   text-decoration: underline;
 }
 
-ul.newest-articles {
+ul.article-list {
   list-style: none;
   padding: 0em;
   li {
@@ -103,7 +103,7 @@ ul.newest-articles {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
-  ul.newest-articles {
+  ul.article-list {
     li {
       font-size: 1.4em;
       margin: 0.2em auto;

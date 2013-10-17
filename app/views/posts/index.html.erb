@@ -31,7 +31,7 @@
           <div class="col-lg-12">
             <div id="tag_cloud">
               <% tag_cloud Post.tag_counts, %w[s m l] do |tag, css_class| %>
-                <%= link_to "#{tag.name}, ", tag_path(tag.name), class: css_class %>
+                <%= link_to "#{tag.name} ", tag_path(tag.name), class: css_class %>
               <% end %>
             </div>
           </div>
@@ -40,14 +40,16 @@
 
       <div class="well">
         <h3>Popular Articles:</h3>
-        <ul class="popular-articles">
-          
+        <ul class="article-list">
+          <% @popular.each do |post| %>
+            <li><%= link_to "#{post.title}", post_path(post) %></li>
+          <% end %>
         </ul>
       </div><!-- /well -->
 
       <div class="well">
         <h3>Newest Articles:</h3>
-        <ul class="newest-articles">
+        <ul class="article-list">
           <% @newest.each do |n| %>
             <li><%= link_to "#{n.title}", post_path(n) %></li>
           <% end %>
