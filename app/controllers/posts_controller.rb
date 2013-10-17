@@ -25,6 +25,9 @@ class PostsController < ApplicationController
       @posts = Post.tagged_with(params[:tag]).page(params[:page]).per_page(3).order('created_at DESC')
     else  
       @posts = Post.search(params[:search], params[:page]).per_page(3).order('created_at DESC')
+      if @posts.blank?
+        flash.now[:notice] = "No results for you search"
+      end
     end 
     @newest = Post.order('created_at DESC').limit(5)
     @popular = Post.joins(:visit).order('total_visits DESC').limit(5)

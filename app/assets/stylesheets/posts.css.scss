@@ -80,12 +80,19 @@ div.markdown {
   .l { font-size: 1.8em; }
   a {
     margin: 0.2em auto;
+    &:hover {
+      color: black;
+      text-decoration: none;
+    }
   }
 }
 
 a.all-link {
   font-size: 1.6em;
-  text-decoration: underline;
+  text-decoration: none;
+  &:hover {
+    color: black;
+  }
 }
 
 ul.article-list {
@@ -95,6 +102,12 @@ ul.article-list {
     font-size: 1.4em;
     margin: 0.8em auto;
     text-align: center;
+    a {
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
   }
 }
 
@@ -120,6 +133,16 @@ ul.article-list {
       font-size: 1.4em;
     }
   }
+
+  #tag_cloud {
+  line-height: 1.6em;
+  .s { font-size: 0.8em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.6em; }
+  a {
+   
+  }
+}
   
 }
 
