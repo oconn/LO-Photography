@@ -21,8 +21,8 @@ LoPhoto::Application.routes.draw do
   match '/about',       to: 'static_pages#about',       via: 'get'
   match '/information', to: 'static_pages#information', via: 'get'
   match 'tags/:tag',    to: 'posts#index',              via: 'get', as: :tag
-
-
+  match '/contact',     to: 'static_pages#contact',     via: 'get'
+ 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

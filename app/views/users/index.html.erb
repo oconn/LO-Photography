@@ -2,20 +2,24 @@
 <div class="container">
 
 	<h1 class="page-title">Admin</h1>
-
-	<ul class="all-users">
-		<% @users.each do |u| %>
-		  <li><%= link_to "#{u.last_name}, #{u.first_name}", u, class: "u-name-link" %></li>
-		  <li><%= link_to "Add Gallery", new_user_user_gallery_path(u, @user_gallery), class: "btn btn-primary" %></li>
-		  <li><%= link_to 'Remove User', user_path(u.id),
-		  	             method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></li>
-		
-		  <% if u.admin? %>
-		  	  <li><%= link_to "All Galleries", user_user_gallery_path(u, @user_gallery), class: "btn btn-warning" %></li>
-		  	<% end %>
-		  <hr />
-		<% end %>
-	</ul>
+  <div class="row">
+  	<div class="col-md-10 col-md-offset-1">
+			<ul class="all-users">
+				<% @users.each do |u| %>
+				  <li><%= link_to "#{u.last_name}, #{u.first_name}", u, class: "u-name-link" %></li>
+				  <li><%= link_to "Add Gallery", new_user_user_gallery_path(u, @user_gallery), class: "btn btn-primary" %></li>
+				  <% if !u.admin? %>
+					  <li><%= link_to 'Remove User', user_path(u.id),
+					  	             method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></li>
+				  <% end %>
+				  <% if u.admin? %>
+				  	  <li><%= link_to "All Galleries", user_user_gallery_path(u, @user_gallery), class: "btn btn-warning" %></li>
+				  	<% end %>
+				  <hr />
+				<% end %>
+			</ul>
+		</div>
+	</div>
 
 	<%= will_paginate @users, :page_links => false %>
 
