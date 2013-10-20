@@ -4,6 +4,7 @@ TODO:
 2) add twitter facebook login
 3) add name to comment
 4) add additional pictures to posts
+5) add I'm kinda loving (editable urls w/desc & pic)
 
 Questions: 
 

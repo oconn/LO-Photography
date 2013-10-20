@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_filter :verify_is_admin, only: [:index, :destroy]
-  before_filter :authenticate_user!
+  before_filter :current_user, only: [:show]
 
 	def index
 		@users = User.all.page(params[:page]).per_page(20).order("email ASC")
@@ -8,7 +8,11 @@ class UsersController < ApplicationController
 
 	def show 
     @user = User.find(params[:id])
-    @user_galleries = UserGallery.all :conditions => ['user_id = ?', @user]
+    if current_user == @user || current_user.admin?
+      @user_galleries = UserGallery.all :conditions => ['user_id = ?', @user]
+    else
+      redirect_to users_path
+    end
   end
 
   def destroy

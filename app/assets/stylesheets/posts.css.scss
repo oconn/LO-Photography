@@ -110,6 +110,12 @@ ul.article-list {
     }
   }
 }
+.well h3 {
+  font-family: always;
+  font-size: 3.5em; 
+  text-align: center;
+  text-decoration: underline;
+}
 
 /* *** Media Queries *** */
 
@@ -130,7 +136,7 @@ ul.article-list {
 @media (min-width: 992px) {
   .well {
     h3 {
-      font-size: 1.4em;
+      font-size: 2.5em;
     }
   }
 
