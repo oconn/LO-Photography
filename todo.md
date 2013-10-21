@@ -10,7 +10,7 @@ TODO:
 Questions: 
 
 1) Blog
-  a) Posts vs Articles
+  a) Posts vs Articles (posts)
 
 2) User homepage message
 
