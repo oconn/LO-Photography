@@ -2,7 +2,7 @@
   <div class="gallery_img">
     <%= link_to("#{image_tag gallery_image.image.url(:thumb), class: "img-responsive gallery_img"}".html_safe, gallery_image.image.url(:original)) %> 
     <%= pin_it_button :media => gallery_image.image.url(:original),
-                      :description => "L.O. Photography: #{@gallery.name} - #{gallery_image.image_file_name}",
+                      :description => "Firefly Photography: #{@gallery.name} - #{gallery_image.image_file_name}",
                       :url => gallery_image.image.url(:original),
                       :count_layout => 'vertical' %>
   </div>
