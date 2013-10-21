@@ -16,4 +16,5 @@
 //= require jquery-fileupload/vendor/tmpl
 //= require turbolinks
 //= require bootstrap.min
+//= require pin_it
 //= require_tree .
