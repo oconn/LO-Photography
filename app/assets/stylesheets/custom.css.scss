@@ -293,6 +293,12 @@ div.pagination {
   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
 }
 
+/* Signature */
+.signature {
+  font-family: always;
+  font-size: 3em; 
+}
+
 /* *** Media Queries *** */
 
 /* Small devices (tablets, 768px and up) */
@@ -311,8 +317,8 @@ div.pagination {
     }
   }
   .navbar-nav>li>a {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
     font-size:1.10em;
     font-weight: bolder;
   }

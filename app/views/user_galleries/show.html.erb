@@ -1,9 +1,5 @@
 <% provide(:title, "#{@user_gallery.name}") %>
 
-<div class="row">
- <%= render @user_gallery.user_images %>
-</div>
-
 <% if current_user && current_user.admin? %>
 	<div class="row">
 	  <div class="col-md-6 col-md-offset-3">
@@ -24,4 +20,35 @@
 	</div>
 <% end %>
 
+<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<div id="links">
+  <%= render @user_gallery.user_images %>
+</div>
+
+<div id="session-message">
+  <p><%= @user_gallery.description %></p>
+  <p class="signature">~Leah (Firefly Photography)</p>
+</div>
+
 <%= link_to 'Back', user_path(@user.id), class: "btn btn-primary" %>
+
+<script>
+document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {index: link, event: event},
+        links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+};
+</script>

@@ -4,7 +4,9 @@
 
 
 h3.gallery-name {
-  text-align: center;  	
+  text-align: center;  
+  margin: 1em auto 3em auto;	
+  max-height: 1em;
 }
 
 img.user-gallery-preview {
@@ -12,17 +14,50 @@ img.user-gallery-preview {
 }
 
 
+.gallery-image-thumb {
+	a {
+		display: table;
+		margin: 0 auto;
+	}
+	display: inline-table;
+	margin: 0.2em auto;
+}
+
+div#links {
+  text-align: center;
+}
+
+div#session-message {
+	margin: 2em auto;
+	.signature {
+		text-align: right;
+	}
+}
+
 /* *** Media Queries *** */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
+	div#session-message {
+		width:80%;
+		.signature {
+
+		}
+	}
   
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   
+  	div#session-message {
+  		width:60%;
+		.signature {
+
+		}
+	}
+
   
 }
 

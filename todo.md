@@ -5,6 +5,7 @@ TODO:
 3) add name to comment
 4) add additional pictures to posts
 5) add I'm kinda loving (editable urls w/desc & pic)
+6) require name for sign-up
 
 Questions: 
 
