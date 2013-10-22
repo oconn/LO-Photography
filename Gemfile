@@ -35,6 +35,8 @@ gem 'acts-as-taggable-on'
 gem 'friendly_id', '5.0.0.rc2'
 # This gem is a Rails plugin for adding a Pinterest.com "Pin It" button to your views.
 gem 'pin_it'
+# jQuery file uploader
+gem 'jquery-fileupload-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

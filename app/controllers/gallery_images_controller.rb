@@ -1,5 +1,5 @@
 class GalleryImagesController < ApplicationController
-  before_filter :verify_is_admin, only: [:create, :destroy]
+  before_filter :verify_is_admin, only: [:new, :create, :destroy]
 
 	def create
     if signed_in?

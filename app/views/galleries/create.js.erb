@@ -1,0 +1,5 @@
+<% if @gallery_image.new_record? %>
+  alert("Failed to upload image: <%= j @image.errors.full_messages.join(', ').html_safe %>");
+<% else %>
+  alert("Passed")
+<% end %>
