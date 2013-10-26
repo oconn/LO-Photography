@@ -2,7 +2,7 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="form-wrap">
       <h2 class="form-title">New Image</h2>
-      <%= form_for [@gallery, @gallery.gallery_images.new], html: { multipart: true } do |f| %>
+      <%= form_for [@gallery, @gallery.gallery_images.new] do |f| %>
         <% if @gallery.gallery_images.build.errors.any? %>
           <div id="error_explanation">
             <div class="alert alert-error">
@@ -16,8 +16,10 @@
           </div>
         <% end %>
 
-        <%= f.label :image, "Upload Image:" %>
-        <%= f.file_field :image, multiple: true, name: "gallery_image[image]" %>
+        <%= f.label :image, "Upload Image:", name: "gallery_image[image]" %>
+        <%= f.file_field :image %>
+
+        <%= f.submit "Submit", class: "btn btn-primary" %>
         
       <% end %>
 
