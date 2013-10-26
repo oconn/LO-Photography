@@ -2,6 +2,11 @@ body { padding-top: 90px; padding-bottom: 70px; }
 
 /* mixins, variables, etc. */
 
+// Yellow #fffabe
+// Teal   #77B0B1
+// Tan    #D4C1B4
+// Coral  #ff5b5b
+
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -9,13 +14,13 @@ body { padding-top: 90px; padding-bottom: 70px; }
 }
 
 @font-face {
-  font-family: "always";
-  src: asset-url('always.ttf');
+  font-family: "freebooter";
+  src: asset-url('freebooter.ttf');
 }
 
 @font-face {
-  font-family: "lexo";
-  src: asset-url('lexo.ttf');
+  font-family: "book";
+  src: asset-url('book.ttf');
 }
 
 /* *** Topography *** */
@@ -34,20 +39,63 @@ hr {
 h1.page-title {
   text-align: center;
   margin-bottom: 1em;
-  font-family: lexo;
+  font-family: freebooter;
   font-size: 4em;
+  letter-spacing: 4px;
+  color: #77B0B1;
+  small {
+    font-family: book;
+    color: #D4C1B4;
+    letter-spacing: 3px;
+  }
+}
+
+.logo {
+  width:20em;
+  display: block;
+  margin: 0 auto;
+  img {
+    position: relative;
+    opacity: 0.4;
+    margin-left: -2em;
+  }
+  h1 {
+    font-size: 4.6em;
+    text-align: left;
+    margin: -50px auto -5px 5px;
+    padding: 0;
+    letter-spacing: 5px;
+  }
+  h2 {
+    font-family: book;
+    color: #D4C1B4;
+    margin: -5px auto -10px auto;
+    letter-spacing: 2.5px;
+    text-align: left;
+  }
+  h3 {
+    font-family: book;
+    color: #ff5b5b;
+    font-size: 1.2em;
+    margin: 10px auto 0 3.2em;
+  }
 }
 
 /* *** Nav Bar *** */
 
 .navbar {
+  background-color: #fffabe;
     div.navbar-header {
       a.navbar-brand {
-        font-family: always;
-        color: #1f1f1f;
+        font-family: freebooter;
+        color: #77B0B1;
         font-size: 2em;
+        letter-spacing: 4px;
         small {
-          font-size: 0.8em;
+          font-size: 0.6em;
+          font-family: book;
+          color: #D4C1B4;
+          letter-spacing: 1px;
         }
       }
     }
@@ -59,11 +107,11 @@ h1.page-title {
 
 .nav>li>a {
   padding: 10px 13px;
+  font-family: book;
 }
 .navbar-default .navbar-nav>.active>a {
   background-color: white;
-  text-shadow: 1px 0px 0px gray; 
-  box-shadow: 1px 1px 1px 1px #000;
+  box-shadow: 1px 1px 1px 1px #D4C1B4;
   &:hover {
     background-color: white;
   }
@@ -73,7 +121,7 @@ h1.page-title {
 }
 .navbar-default .navbar-nav>.open>a:focus {
   background-color: white;
-  box-shadow: 1px 1px 1px 1px #000;
+  box-shadow: 1px 1px 1px 1px #D4C1B4;
   z-index: 1;
   text-shadow: 1px 0px 0px gray;
 }
@@ -169,8 +217,8 @@ div.search-div {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 gray; 
-  background-color: #74B976;
-  border: 1px solid #2B862E;
+  background-color: #77B0B1;
+  border: 1px solid #77B0B1;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -181,8 +229,8 @@ div.search-div {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
   text-shadow: 0 1px 0 gray; 
-  background-color: #fb4848;
-  border: 1px solid #cd1010;
+  background-color: #ff5b5b;
+  border: 1px solid #ff5b5b;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -304,14 +352,12 @@ div.pagination {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .navbar {
+    background: rgba(255, 250, 190, 0.7);
     min-height: 70px;
-    background-color: rgba(248,248,248,0.75);
     div.navbar-header {
       a.navbar-brand {
-        font-family: always;
-        color: black;
         font-size: 2.5em;
-        padding: 25px 15px;
+        padding: 20px 15px 10px 15px;
         padding-right: 1em;
       }
     }
@@ -320,7 +366,7 @@ div.pagination {
     padding-top: 25px !important;
     padding-bottom: 25px !important;
     font-size:1.10em;
-    font-weight: bolder;
+    letter-spacing: 2px;
   }
   .navbar-default .navbar-nav>.active>a,
   .navbar-default .navbar-nav>li>a {
@@ -337,6 +383,8 @@ div.pagination {
   }
   .dropdown-menu>li>a {
     color: black;
+    border-color: #D4C1B4;  
+    font-family: book;
   }
   .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
    
@@ -344,7 +392,11 @@ div.pagination {
   .navbar-nav>li>.dropdown-menu {
     opacity: 2;
   }
-  
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #000;
+    text-decoration: none;
+    background-color: #fffabe;
+  }  
 }
 
 /* Medium devices (desktops, 992px and up) */
