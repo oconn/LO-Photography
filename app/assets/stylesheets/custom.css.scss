@@ -51,8 +51,7 @@ h1.page-title {
 }
 
 .logo {
-  width:20em;
-  display: block;
+  display: table;
   margin: 0 auto;
   img {
     position: relative;
@@ -257,6 +256,25 @@ div.sed {
 }
 
 /* *** MISC *** */
+
+// buttons
+
+.btn-primary {
+  color: #fff;
+  font-family: book;
+  background-color: #77B0B1;
+  border-color: #77B0B1;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #6ba0a1;
+  border-color: #6ba0a1;
+}
+
+
+// Pagination
+
 
 div.pagination {
   margin: 1em auto; 
