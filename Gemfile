@@ -37,6 +37,8 @@ gem 'friendly_id', '5.0.0.rc2'
 gem 'pin_it'
 # jQuery file uploader
 gem 'jquery-fileupload-rails'
+# New Relic
+gem 'newrelic_rpm'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
