@@ -1,39 +1,45 @@
 <% provide(:title, "#{@post.title}") %>
-<div class="container">
-	<h2 class="post-title"><%= @post.title %></h2>
-	<h3 class="post-time"><%= @post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
-	<hr />
-	<%= image_tag @post.cover_image.url(:original), :class => "img-responsive post-img" %>
-	<div class="row">
-	  <div class="col-md-8 col-md-offset-2">
-	    <div class="markdown">
-	      <%= markdown(@post.text) %>
-	    </div>
-	  </div>
+<div class="post-title-div">
+	<div class="date-block">
+	  <p class="day"><%= @post.created_at.strftime('%e') %><p>
+	  <p class="month"><%= @post.created_at.strftime('%b') %><p>
+	  <p class="year"><%= @post.created_at.strftime('%Y') %><p>
 	</div>
-	<hr />
+	<div>
+	  <h2 class="post-title"><%= @post.title %></h2>
+	</div>
+</div>
+<hr class="blog-hr" />
+<%= image_tag @post.cover_image.url(:original), :class => "img-responsive post-img" %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="markdown">
+      <%= markdown(@post.text) %>
+    </div>
+  </div>
+</div>
+<hr />
 
-	<%= render @post.comments %>
+<%= render @post.comments %>
 
-	<div class="row">
-	  <div class="col-md-6 col-md-offset-3">
-	    <div class="form-wrap"> 
-				<h3>Add a comment:</h3>
-				<%= form_for([@post, @post.comments.build]) do |f| %>
-				  <div class="form-group">
-				    <%= f.label :body, "Comment" %>
-				    <%= f.text_area :body %>
-				  </div>
-				  
-			    <%= f.submit "Submit Comment", class: "btn btn-primary" %>
-				 
-				<% end %>
-			</div>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="form-wrap"> 
+			<h3>Add a comment:</h3>
+			<%= form_for([@post, @post.comments.build]) do |f| %>
+			  <div class="form-group">
+			    <%= f.label :body, "Comment" %>
+			    <%= f.text_area :body %>
+			  </div>
+			  
+		    <%= f.submit "Submit Comment", class: "btn btn-primary" %>
+			 
+			<% end %>
 		</div>
 	</div>
-
-	<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
-	<% if current_user && current_user.admin? %>
-	  | <%= link_to 'Edit', edit_post_path(@post) %>
-	<% end %>	
 </div>
+
+<%= link_to 'Back', posts_path, class: "btn btn-primary" %>
+<% if current_user && current_user.admin? %>
+  | <%= link_to 'Edit', edit_post_path(@post) %>
+<% end %>	

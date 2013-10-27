@@ -4,24 +4,77 @@
 
 /* *** Index *** */
 
+#sidebar-wrapper {
+  
+}
+
 h1.blog-title {
 	text-align: center;
   font-size: 2.4em;
   margin: 0.2em auto 2em auto;
 }
 
-h2.post-title {
-  margin: 0.2em auto;
+.post-title-div {
+  display: table;
+  margin: 0 auto auto 1em;
   padding: 0;
-  font-size: 3.4em;  
-  font-family: lexo;
+  div {
+    float: left;
+  }
 }
-h3.post-time {
-  font-size: 2em;
-  margin: 0 auto 1em auto;
-  padding: 0 auto;
-  font-family: always;
-  font-weight: bolder;
+
+h2.post-title {
+  margin: 1.4em auto auto 1em;
+  padding: 0;
+  font-size: 1.2em;  
+  font-family: book;
+  &:first-letter {
+    font-family: freebooter;
+    font-size: 2em; 
+  }
+}
+.date-block {
+  font-family: book;
+  margin-top: 0.7em;
+  p.day {
+    font-size: 1.5em;
+    padding-top:0.4em;
+    line-height: 0.2em;
+    color: #000;
+  }
+  p.month {
+    font-size: 1.2em;
+    text-align: center;
+    line-height: 0.3em;
+    text-transform: uppercase;
+    color: #D4C1B4;
+  }
+  p.year {
+    font-size: 1.4em;
+    line-height: 0.4em;
+    letter-spacing: -2px;
+    color: #77B0B1;
+  }
+}
+
+hr.blog-hr {
+  margin: 0em auto -0.5em auto;
+  height: 30px;
+  border-style: solid;
+  border-color: #D4C1B4;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.blog-hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: #D4C1B4;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 
 img.post-img {
@@ -79,7 +132,7 @@ div.markdown {
   .m { font-size: 1.4em; }
   .l { font-size: 1.8em; }
   a {
-    margin: 0.2em auto;
+    margin: 0.4em 0.8em;
     &:hover {
       color: black;
       text-decoration: none;
@@ -110,17 +163,41 @@ ul.article-list {
     }
   }
 }
-.well h3 {
-  font-family: always;
-  font-size: 3.5em; 
-  text-align: center;
-  text-decoration: underline;
+
+.well {
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+  margin: 0;  
+  h3 { 
+    font-family: book;
+    font-size: 2em; 
+    text-align: center;
+    margin: 0;
+  }
+  a {
+    font-family: book;
+    color: #77B0B1;
+  }
 }
 
 /* *** Media Queries *** */
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
+  .post-sidebar {
+
+  }
+  .well {
+    margin: 2em auto;
+    form {
+      padding-top: 5px;
+      input {
+        
+      }     
+    }
+  }
 
   ul.article-list {
     li {
@@ -129,15 +206,57 @@ ul.article-list {
       text-align: left;
     }
   }
-  
+
+  h2.post-title {
+    margin: 0.6em auto auto 1em;
+    padding: 0;
+    font-size: 2em;  
+    font-family: book;
+  }
+ 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .well {
-    h3 {
-      font-size: 2.5em;
+  
+   #sidebar-wrapper {
+    margin-right: -250px;
+    top: 250px;
+    right: 250px;
+    width: 250px;
+    position: absolute;
+    z-index: 1000;
+    transition: all 0.4s ease 0s;
+  }
+
+  ul.article-list {
+    padding: 0em;
+    li {
+      margin: 0.8em auto;
+      font-size: 1.2em;
+      &:before {
+        content: "•  ";
+        color: #77B0B1;
+      }
+      a {
+        &:hover {
+          text-decoration: none;
+          color: black;
+          text-align: left;
+        }
+      }
     }
+  }
+
+  .well {
+    &:first-child {
+      
+    }
+    margin: 0;
+    h3 {
+      font-size: 1.2em;
+    }
+    input { height: 10px;}
   }
 
   #tag_cloud {
@@ -154,5 +273,9 @@ ul.article-list {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+
+  #sidebar-wrapper {
+    
+  }
   
 }

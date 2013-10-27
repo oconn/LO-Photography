@@ -1,7 +1,15 @@
 <% @posts.each do |post| %>
-  <h2 class="post-title"><%= post.title %></h2>
-  <h3 class="post-time"><%= post.created_at.strftime("%B %d, %Y at %I:%M%p") %></h3>
-  <hr />
+<div class="post-title-div">
+  <div class="date-block">
+    <p class="day"><%= post.created_at.strftime('%e') %><p>
+    <p class="month"><%= post.created_at.strftime('%b') %><p>
+    <p class="year"><%= post.created_at.strftime('%Y') %><p>
+  </div>
+  <div>
+    <h2 class="post-title"><%= post.title %></h2>
+  </div>
+</div>
+  <hr class="blog-hr" />
   <%= link_to("#{image_tag post.cover_image.url(:original), :class => "img-responsive pic"}".html_safe, post_path(post) )%>
   <div class="markdown">
     <%= markdown(post.description) %>
