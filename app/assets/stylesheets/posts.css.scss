@@ -9,7 +9,7 @@
 }
 
 h1.blog-title {
-	text-align: center;
+  text-align: center;
   font-size: 2.4em;
   margin: 0.2em auto 2em auto;
 }
@@ -67,14 +67,14 @@ hr.blog-hr {
   background-color: #fff;
 }
 .blog-hr:before { /* Not really supposed to work, but does */
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;    
-    border-style: solid;
-    border-color: #D4C1B4;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #D4C1B4;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
 }
 
 img.post-img {
@@ -92,20 +92,20 @@ div.markdown {
   }
 
 	blockquote {
-  background: gray;
-  border-left: 10px solid black;
-  margin: 1em auto;
-  padding: 0.4em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
-  border-radius: 1em;
-  width:75%;
+    background: gray;
+    border-left: 10px solid black;
+    margin: 1em auto;
+    padding: 0.4em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    border-radius: 1em;
+    width:75%;
 
     p {
-    	font-size: 1.2em;
-    	line-height: 1em;
-    	padding: 0;
-    	margin: 0;
-    	text-indent: 2em;
+      font-size: 1.2em;
+      line-height: 1em;
+      padding: 0;
+      margin: 0;
+      text-indent: 2em;
     }
   }
   blockquote:before {
@@ -171,7 +171,7 @@ ul.article-list {
   margin: 0;  
   h3 { 
     font-family: book;
-    font-size: 2em; 
+    font-size: 2em;
     text-align: center;
     margin: 0;
   }
@@ -221,12 +221,16 @@ ul.article-list {
   
    #sidebar-wrapper {
     margin-right: -250px;
-    top: 250px;
-    right: 250px;
-    width: 250px;
-    position: absolute;
-    z-index: 1000;
-    transition: all 0.4s ease 0s;
+     top: 250px;
+     right: 250px;
+     width: 250px;
+     position: absolute;
+     z-index: 1000;
+     -webkit-transition: all 0.4s ease 0s;
+     -moz-transition: all 0.4s ease 0s;
+     -o-transition: all 0.4s ease 0s;
+     -ms-transition: all 0.4s ease 0s;
+     transition: all 0.4s ease 0s;
   }
 
   ul.article-list {

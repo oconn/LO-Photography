@@ -5,12 +5,13 @@
 .info {
 	h2 {
 		font-family: freebooter;
-		font-size: 3em;
+		font-size: 2em;
 		text-align: center;
 		margin: 1em auto;
 	}
-	p {
-
+	sub {
+    font-family: book;
+    font-size: 1em;
 	}
 }
 
@@ -18,13 +19,36 @@
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	.info {
+		h2 {
+			font-family: freebooter;
+			font-size: 3em;
+			text-align: center;
+			margin: 1em auto;
+		}
+		sub {
+	    font-family: book;
+	    font-size: 1em;
+		}
+	}
 
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   
-  
+  .info {
+		h2 {
+			font-family: freebooter;
+			font-size: 4em;
+			text-align: center;
+			margin: 1em auto;
+		}
+		sub {
+	    font-family: book;
+	    font-size: 1em;
+		}
+	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
