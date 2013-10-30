@@ -4,7 +4,8 @@
 </p>
 
 <% if current_user && current_user.admin? %>
-  <%= link_to 'Destroy Comment', [comment.post, comment],
+  <%= link_to 'Delete Comment', [comment.post, comment],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Are you sure?' },
+               class: "btn btn-danger" %>
 <% end %>

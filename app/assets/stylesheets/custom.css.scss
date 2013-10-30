@@ -211,6 +211,11 @@ div.search-div {
   display: table;
 }
 
+.drop-down-hr {
+  padding: 0;
+  margin: 0.2em auto;
+}
+
 /* *** Flash messages *** */
 
 .notice {
@@ -308,13 +313,13 @@ div.pagination {
     user-select: none;
 
     color: #fff;
-    background-color: #428bca;
-    border-color: #357ebd;
+    background-color: #77B0B1;
+    border-color: #77B0B1;
 
     &:hover {
       color: #fff;
-      background-color: #3276b1;
-      border-color: #285e8e;
+      background-color: #6ba0a1;
+      border-color: #6ba0a1;
       text-decoration: none;
     }
   }
@@ -340,13 +345,13 @@ div.pagination {
     user-select: none;
 
     color: #fff;
-    background-color: #428bca;
-    border-color: #357ebd;
+    background-color: #77B0B1;
+    border-color: #77B0B1;
 
     &:hover {
       color: #fff;
-      background-color: #3276b1;
-      border-color: #285e8e;
+      background-color: #6ba0a1;
+      border-color: #6ba0a1;
       text-decoration: none;
     }
   }

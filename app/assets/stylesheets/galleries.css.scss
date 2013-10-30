@@ -18,6 +18,12 @@ div.gallery-sed {
     }
   }
 
+.gallery-title {
+	font-family: freebooter;
+	font-size: 3em;
+	text-decoration: underline;
+}
+
 
 /* *** Media Queries *** */
 
@@ -28,8 +34,13 @@ div.gallery-sed {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  
- 
+
+  div.gallery-sed {
+	  margin: 3em auto;
+	  a {
+		  margin: 1em auto;
+	  }
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */

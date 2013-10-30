@@ -14,7 +14,7 @@
   <div class="markdown">
     <%= markdown(post.description) %>
   </div>  
-  <p>
+  <p class="tag-link">
     Tags: <%= raw post.tags.map { |t| link_to t.name, tag_path(t.name) }.join(', ') %>
   </p>
   <div class="sed">

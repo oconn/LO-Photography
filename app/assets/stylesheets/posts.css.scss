@@ -81,6 +81,10 @@ img.post-img {
   margin: 0 auto;
 }
 
+.tag-link a {
+  color: #77B0B1;
+}
+
 div.markdown {
   margin: 1em auto;
 	p {
@@ -124,13 +128,18 @@ div.markdown {
     margin-left: 95%;
     vertical-align: -0.4em;
   }
+  img {
+    display: block;
+    margin: 0.5em auto;
+  }
 }
 
 #tag_cloud {
   line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.4em; }
-  .l { font-size: 2em; }
+  .s { font-size: 1em; }
+  .m { font-size: 1.2em; }
+  .l { font-size: 1.6em; }
+  .h { font-size: 2.0em; }
   a {
     margin: 0.4em 0.8em;
     &:hover {
@@ -265,10 +274,10 @@ ul.article-list {
 
   #tag_cloud {
   line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.6em; }
-  .h { font-size: 2.0em; }
+  .s { font-size: 1em; }
+  .m { font-size: 1.4em; }
+  .l { font-size: 1.8em; }
+  .h { font-size: 2.2em; }
   a {
    
   }
