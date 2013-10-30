@@ -22,6 +22,7 @@ LoPhoto::Application.routes.draw do
   match '/information', to: 'static_pages#information', via: 'get'
   match 'tags/:tag',    to: 'posts#index',              via: 'get', as: :tag
   match '/contact',     to: 'static_pages#contact',     via: 'get'
+  match '/toolkit',     to: 'member_pages#toolkit',     via: 'get'
  
 
   # The priority is based upon order of creation: first created -> highest priority.
