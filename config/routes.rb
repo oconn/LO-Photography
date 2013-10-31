@@ -15,7 +15,7 @@ LoPhoto::Application.routes.draw do
     resources :comments
   end
 
-  resources :inquiries, :only => [:new, :create] do
+  resources :inquiries, :only => [:new, :create], :path => "contact" do
     get 'thank_you', :on => :collection
   end
   
