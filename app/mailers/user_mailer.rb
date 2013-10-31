@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
     @inquiry = inquiry
     mail(:subject => "Firefly Contact",
     	   :to      => "leah@lofirefly.com",
-    	   :bcc     => "matthew.j.oconnell@gmail.com")
+    	   :bcc     => "matthew.j.oconnell1@gmail.com")
   end
  
 end
