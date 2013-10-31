@@ -14,6 +14,10 @@ LoPhoto::Application.routes.draw do
   resources :posts do
     resources :comments
   end
+
+  resources :inquiries, :only => [:new, :create] do
+    get 'thank_you', :on => :collection
+  end
   
   root 'static_pages#home'
 
