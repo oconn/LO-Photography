@@ -21,12 +21,15 @@ LoPhoto::Application.routes.draw do
   
   root 'static_pages#home'
 
-  match '/help',        to: 'static_pages#help',        via: 'get'
-  match '/about',       to: 'static_pages#about',       via: 'get'
-  match '/information', to: 'static_pages#information', via: 'get'
-  match 'tags/:tag',    to: 'posts#index',              via: 'get', as: :tag
-  match '/contact',     to: 'static_pages#contact',     via: 'get'
-  match '/toolkit',     to: 'member_pages#toolkit',     via: 'get'
+  match '/help',             to: 'static_pages#help',        via: 'get'
+  match '/about',            to: 'static_pages#about',       via: 'get'
+  match '/information',      to: 'static_pages#information', via: 'get'
+  match 'tags/:tag',         to: 'posts#index',              via: 'get', as: :tag
+  match '/contact',          to: 'static_pages#contact',     via: 'get'
+  match '/toolkit',          to: 'member_pages#toolkit',     via: 'get'
+  match '/style',            to: 'member_pages#style',       via: 'get'
+  match '/locations',        to: 'member_pages#location',    via: 'get'
+  match '/display_your_art', to: 'member_pages#display',     via: 'get'
  
 
   # The priority is based upon order of creation: first created -> highest priority.
