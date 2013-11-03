@@ -1,6 +1,27 @@
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+
+    $("body").css("display", "none");
+	  $("body").fadeIn(3000);
+
+    $('.cycle-slideshow').cycle({
+          
+    });
+})
+</script>
 <div class="logo">
-	<%= image_tag "circles.png"  %>
+	<%= image_tag "circles.png", id: "circles"%>
 	<h1 class="page-title">Firefly</h1>
   <h2>photography</h2>
   <h3>by Leah O'Connell</h3>
+</div>
+<div class="cycle-slideshow"
+  data-cycle-pause-on-hover="false"
+  data-cycle-speed="2000">
+<%#= image_tag "1wo.jpg", alt: "lofirefly homepage image", class: "img-responsive cycle-slide cycle-sentinel" %>
+<%= image_tag "2wo.jpg", alt: "lofirefly homepage image", class: "img-responsive cycle-slide cycle-sentinel" %>
+<%= image_tag "3wo.jpg", alt: "lofirefly homepage image", class: "img-responsive cycle-slide cycle-sentinel" %>
+<%= image_tag "6wo.jpg", alt: "lofirefly homepage image", class: "img-responsive cycle-slide cycle-sentinel" %>
+<%= image_tag "4wo.jpg", alt: "lofirefly homepage image", class: "img-responsive cycle-slide cycle-sentinel" %>
+<%= image_tag "5wo.jpg", alt: "lofirefly homepage image", class: "img-responsive cycle-slide cycle-sentinel" %>
 </div>

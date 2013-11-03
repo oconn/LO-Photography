@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+div.cycle-slideshow {
+	width: 75%;
+	margin: 1em auto;
+	img {
+		max-width: 100%;
+		box-shadow: 10px 10px 20px #888888;
+	}
+}
+img#circles {
+	z-index: -1;
+}
 .info {
 	h2 {
 		font-family: freebooter;
@@ -54,6 +65,14 @@
 		}
 	}
 
+	div#image_container {
+		img {
+		  &:empty {
+	    
+		  }
+		}
+	}
+
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -71,6 +90,19 @@
 	    font-size: 1em;
 		}
 	}
+
+	.aboutme2 {
+	  margin-top: -2em;
+  }
+
+	div#image_container {
+		img {
+		  &:empty {
+	      
+		  }
+		}
+	}
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
