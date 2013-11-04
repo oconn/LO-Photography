@@ -1,4 +1,102 @@
 <% provide(:title, "Style Guide") %>
 <h1 class="page-title">Style Guide</h1>
+<div class="style-board-container">
+	<div class="row">
+		<div class="col-md-3 board">
+			<div class="flip-board" id="1">
+			  <%= image_tag "board1.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "tealbox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+		<div class="col-md-3 board">
+			<div class="flip-board2" id="2">
+			  <%= image_tag "board2.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "yellowbox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+		<div class="col-md-3 board">
+			<div class="flip-board3" id="3">
+			  <%= image_tag "board3.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "whitebox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+		<div class="col-md-3 board">
+			<div class="flip-board4" id="4">
+			  <%= image_tag "board1.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "tealbox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3 board">
+			<div class="flip-board5" id="5">
+			  <%= image_tag "board2.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "yellowbox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+		<div class="col-md-3 board">
+			<div class="flip-board6" id="6">
+			  <%= image_tag "board3.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "whitebox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+		<div class="col-md-3 board">
+			<div class="flip-board7" id="7">
+			  <%= image_tag "board1.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "tealbox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+		<div class="col-md-3 board">
+			<div class="flip-board8" id="8">
+			  <%= image_tag "board2.jpg", alt: "style board1", class: "img-responsive" %>
+			  <%= image_tag "yellowbox.jpg", alt: "style board1-text", class: "img-responsive" %>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+  $( '.flip-board' ).cycle({
+    fx: "flipVert",
+    next: '#1', 
+    timeout: 0
+  });
+  $( '.flip-board2' ).cycle({
+    fx: "flipHorz",
+    next: '#2', 
+    timeout: 0
+  });
+  $( '.flip-board3' ).cycle({
+    fx: "flipVert",
+    next: '#3', 
+    timeout: 0
+  });
+  $( '.flip-board4' ).cycle({
+    fx: "flipHorz",
+    next: '#4', 
+    timeout: 0
+  });
+  $( '.flip-board5' ).cycle({
+    fx: "flipHorz",
+    next: '#5', 
+    timeout: 0
+  });
+  $( '.flip-board6' ).cycle({
+    fx: "flipVert",
+    next: '#6', 
+    timeout: 0
+  });
+  $( '.flip-board7' ).cycle({
+    fx: "flipHorz",
+    next: '#7', 
+    timeout: 0
+  });
+  $( '.flip-board8' ).cycle({
+    fx: "flipVert",
+    next: '#8', 
+    timeout: 0
+  });
+</script>
+
 
 <%= link_to "Back", toolkit_path, class: "btn btn-primary" %>

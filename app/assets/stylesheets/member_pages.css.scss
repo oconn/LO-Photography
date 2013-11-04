@@ -5,8 +5,29 @@
 /* *** Media Queries *** */
 .tool-kit-header {
 	text-align: center;
+	img {
+		max-width:100%;
+		box-shadow: 1px 1px 10px gray;
+		&:hover {
+			box-shadow: 4px 4px 15px gray;
+		}
+	}
 }
-
+.style-board-container {
+	margin: 3em auto;
+  .row {
+    margin: 0 auto;
+    .col-md-3 {
+    	margin: 0;
+    	padding: 0;
+    }
+	  .board {
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
