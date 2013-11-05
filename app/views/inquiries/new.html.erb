@@ -1,8 +1,13 @@
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6">
     <div class="form-wrap">	
 			<h2 class="form-title">Contact</h2>
       <%= render 'form', :inquiry => @inquiry %>
     </div>
   </div>
+  <div class="col-md-6">
+		<div class="form-wrap">
+      <%= image_tag "contact.jpg", alt: "Test", class: "contact-img" %>
+    </div>
+	</div>
 </div>
