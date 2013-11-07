@@ -39,6 +39,8 @@ gem 'pin_it'
 gem 'jquery-fileupload-rails'
 # New Relic
 gem 'newrelic_rpm'
+# Sitemap generator
+gem 'sitemap_generator'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

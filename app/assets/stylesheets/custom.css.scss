@@ -71,6 +71,7 @@ h1.page-title {
     margin: -5px auto -10px auto;
     letter-spacing: 2.5px;
     text-align: left;
+    z-index: -10 !important;
   }
   h3 {
     font-family: book;
