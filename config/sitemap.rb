@@ -38,7 +38,8 @@ SitemapGenerator::Sitemap.create do
   #   end
   #
   #      
-  Post.find_each do |post|
-    add post_path(post), :lastmod => post.updated_at
-  end
+  
+  #Post.find_each do |post|
+  #  add post_path(post), :lastmod => post.updated_at
+  #end
 end
