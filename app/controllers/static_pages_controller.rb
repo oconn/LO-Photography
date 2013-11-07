@@ -8,10 +8,13 @@ class StaticPagesController < ApplicationController
 
 	def about
 	end
-
-	def information
+ 
+	def contact
 	end
 
-	def contact
+	def theprocess
+	end
+
+	def rates
 	end
 end

@@ -1,20 +1,24 @@
 <% provide(:title, "#{@gallery.name}") %>
 <h1 class="page-title"><%= @gallery.name %></h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
 
-<!-- The Gallery as lightbox dialog, should be a child element of the document body -->
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
+    <div id="links">
+      <%= render @gallery.gallery_images %>
+    </div>
+  </div>
 </div>
 
-<div id="links">
-  <%= render @gallery.gallery_images %>
-</div>
 
 <% if current_user && current_user.admin? %>
   <%= render "gallery_images/form" %>

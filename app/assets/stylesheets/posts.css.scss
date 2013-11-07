@@ -85,6 +85,8 @@ img.post-img {
   color: #77B0B1;
 }
 
+/* *** Markdown ***/
+
 div.markdown {
   margin: 1em auto;
 	p {
@@ -96,8 +98,8 @@ div.markdown {
   }
 
 	blockquote {
-    background: gray;
-    border-left: 10px solid black;
+    background-color: #fffabe;
+    border-left: 10px solid #77B0B1;
     margin: 1em auto;
     padding: 0.4em 10px;
     quotes: "\201C""\201D""\2018""\2019";
@@ -113,7 +115,7 @@ div.markdown {
     }
   }
   blockquote:before {
-    color: white;
+    color: #77B0B1;
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;
@@ -121,11 +123,11 @@ div.markdown {
     vertical-align: -0.4em;
   }
   blockquote:after {
-    color: white;
+    color: #77B0B1;
     content: close-quote;
     font-size: 4em;
     line-height: 0.1em;
-    margin-left: 95%;
+    margin-left: 98%;
     vertical-align: -0.4em;
   }
   img {
