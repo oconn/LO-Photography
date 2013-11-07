@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.lofirefly.com"
+SitemapGenerator::Sitemap.default_host = "https://www.lofirefly.com"
 
 SitemapGenerator::Sitemap.create do
   # Notice the below if you're hosting Jekyll/Octopress in a subdirectory
@@ -41,9 +41,4 @@ SitemapGenerator::Sitemap.create do
   Post.find_each do |post|
     add post_path(post), :lastmod => post.updated_at
   end
-end
-
-after "deploy", "refresh_sitemaps"
-task :refresh_sitemaps do
-  run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
 end
