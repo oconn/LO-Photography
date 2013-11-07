@@ -7,7 +7,8 @@ SitemapGenerator::Sitemap.create do
   # add_to_index '/path/sitemap.xml' 
   add '/galleries'
   add '/about'
-  add '/information'
+  add '/process'
+  add '/rates_raves'
   add '/contact/new'
   add '/users/sign_in'
   
@@ -28,9 +29,17 @@ SitemapGenerator::Sitemap.create do
   #
   #   add articles_path, :priority => 0.7, :changefreq => 'daily'
   #
+  add '/posts', :priority => 0.7, :changefreq => 'daily'
+
   # Add all articles:
   #
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
+  #
+  #      
+  Post.find_each do |post|
+    add post_path(post), :lastmod => post.updated_at
+  end
+
 end
