@@ -41,9 +41,9 @@ SitemapGenerator::Sitemap.create do
   Post.find_each do |post|
     add post_path(post), :lastmod => post.updated_at
   end
+end
 
-  after "deploy", "refresh_sitemaps"
-  task :refresh_sitemaps do
-    run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
-  end
+after "deploy", "refresh_sitemaps"
+task :refresh_sitemaps do
+  run "cd #{latest_release} && RAILS_ENV=#{rails_env} rake sitemap:refresh"
 end
