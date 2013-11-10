@@ -12,4 +12,7 @@ class MemberPagesController < ApplicationController
 
   def display
   end
+
+  def session_specials
+  end
 end

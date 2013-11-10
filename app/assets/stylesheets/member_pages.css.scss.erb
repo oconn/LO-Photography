@@ -1,0 +1,172 @@
+// Place all the styles related to the MamberPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* *** Media Queries *** */
+.tool-kit-header {
+	text-align: center;
+	img {
+		max-width:100%;
+		box-shadow: 1px 1px 10px gray;
+		&:hover {
+			box-shadow: 4px 4px 15px gray;
+		}
+	}
+}
+.style-board-container {
+	margin: 3em auto;
+  .row {
+    margin: 0 auto;
+    .col-md-3 {
+    	margin: 0;
+    	padding: 0;
+    }
+	  .board {
+			img {
+				width: 100%;
+				border: 4px solid #000;
+			}
+		}
+	}
+}
+
+.slide1, .slide2, .slide3 {
+	width:100%;
+	height:100%;
+	h4 {
+	  margin:0.4em;
+	}
+	p {
+		margin: 1em 0.4em auto 0.4em;
+		font-family: book;
+	}
+	border: 4px solid #000;
+}
+.slide1 {
+	background-color: #fffabe;
+}
+.slide2 {
+	background-color: #77B0B1;
+}
+.slide3 {
+	background-color: #D4C1B4;
+}
+.style-important {
+	margin-top: 2em;
+}
+
+/* *** Session Specials *** */
+
+.art-collection {
+	.border-on {
+		border: 1px solid #000;
+	}
+	.deluxe-print {
+		h3 {
+      
+		}
+		ul {
+			color: #fffabe;
+			background-color: gray;
+			border: 2px solid #000;
+			li {
+				padding: 0.5em;
+				margin-left: 50px;
+			}
+		}
+	}
+	.a-la-carte-prints {
+	  ul {
+	  	display: table;
+	  	background-color: gray;
+	  	color: #fffabe;
+	  	padding: 1em 25%;
+	  	border: 2px solid #000;
+	  	margin: 0 auto;
+	  	li {
+        margin: 0.5em auto;
+	  	}
+	  }
+	}
+  h2 {
+  	font-family: freebooter;
+  	text-align: center;
+  	background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: 270px;
+		clear: both;
+		padding: 1.2em 2em;
+		font-size: 3em;
+		display: table;
+		margin: 0 auto;
+		&:hover {
+			text-shadow: 1px 1px 1px 	gray;
+			text-decoration: underline;
+		}
+  	sub {
+  		font-family: book;
+  	}
+  }
+  h3 {
+  	font-family: book;
+  	text-decoration: underline;
+  	text-align: center;
+  }
+  ul { // both .print-options & .price-options
+    list-style: none;
+    font-family: book;
+  }
+  .print-options {
+  	margin: 1em auto 0 auto;
+  	height: 130px;
+  	li {
+  		margin: 0.5em auto 0.5em 5em;
+  	}
+  }
+  .price-options {
+  	background-color: gray;
+  	color: #fffabe;
+  	border: 2px solid #000;
+  	li {
+  	  margin: 0.5em auto 0.5em 5em; 
+      b {
+      	font-size: 1.4em;
+      	font-weight: lighter;
+      }
+  	}
+  }
+  .h2-1 {
+ 	  background-image: url(<%= asset_path 'shape1.png' %>);
+  }
+  .h2-2 {
+  	background-image: url(<%= asset_path 'shape2.png' %>);
+  }
+  .h2-3 {
+  	background-image: url(<%= asset_path 'shape3.png' %>);
+  }
+  .h2-4 {
+  	background-image: url(<%= asset_path 'shape4.png' %>);
+  }
+  .h2-5 {
+  	background-image: url(<%= asset_path 'shape5.png' %>);
+  }
+  #toggle1, #toggle2, #toggle3, #toggle4, #toggle5 {
+  	display: none;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}

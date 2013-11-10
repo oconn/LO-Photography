@@ -21,16 +21,17 @@ LoPhoto::Application.routes.draw do
   
   root 'static_pages#home'
 
-  match '/help',             to: 'static_pages#help',        via: 'get'
-  match '/about',            to: 'static_pages#about',       via: 'get'
-  match '/process',          to: 'static_pages#theprocess',  via: 'get'
-  match '/rates_raves',      to: 'static_pages#rates',       via: 'get'
-  match 'tags/:tag',         to: 'posts#index',              via: 'get', as: :tag
-  match '/toolkit',          to: 'member_pages#toolkit',     via: 'get'
-  match '/style',            to: 'member_pages#style',       via: 'get'
-  match '/locations',        to: 'member_pages#location',    via: 'get'
-  match '/display_your_art', to: 'member_pages#display',     via: 'get'
- 
+  match '/help',             to: 'static_pages#help',             via: 'get'
+  match '/about',            to: 'static_pages#about',            via: 'get'
+  match '/process',          to: 'static_pages#theprocess',       via: 'get'
+  match '/rates_raves',      to: 'static_pages#rates',            via: 'get'
+  match 'tags/:tag',         to: 'posts#index',                   via: 'get', as: :tag
+  match '/toolkit',          to: 'member_pages#toolkit',          via: 'get'
+  match '/style',            to: 'member_pages#style',            via: 'get'
+  match '/locations',        to: 'member_pages#location',         via: 'get'
+  match '/display_your_art', to: 'member_pages#display',          via: 'get'
+  match '/session_specials', to: 'member_pages#session_specials', via: 'get'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -57,6 +57,7 @@
             <li><%= link_to 'Help', help_path %></li>
             <hr class="drop-down-hr" />
             <li><%= link_to 'Member Toolkit', toolkit_path %></li>
+            <li><%= link_to "Session Specials", session_specials_path %></li>
             <% if current_user && current_user.admin? %>
               <li><%= link_to "Admin", users_path %></li>
             <% end %>
