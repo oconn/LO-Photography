@@ -262,7 +262,25 @@ div.sed {
   @include box_sizing;
 }
 
-/* *** MISC *** */
+.why-signup {
+  h2 {
+    background-color: #77B0B1;
+    width: 100%;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: #fffabe !important; 
+  }
+  h3 {
+    font-family: freebooter;
+    font-size: 2.5em;
+  }
+  ul {
+    font-family: book;
+  }
+  p {
+    font-family: book;
+  }
+}
 
 // buttons
 
@@ -279,6 +297,10 @@ div.sed {
   border-color: #6ba0a1;
 }
 
+.home-button {
+  margin: 3em auto;
+  display: table;
+}
 
 // Pagination
 
