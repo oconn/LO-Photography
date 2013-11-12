@@ -12,6 +12,16 @@ module ApplicationHelper
     end
   end
 
+  # Returns the full title on a per-page basis.
+  def meta_description(desc)
+    base_desc = "Firefly Photography"
+    if desc.empty?
+      base_desc
+    else
+      "#{base_desc} | #{desc}"
+    end
+  end
+
   class HTMLwithPygments < Redcarpet::Render::HTML
     def block_code(code, language)
       sha = Digest::SHA1.hexdigest(code)
