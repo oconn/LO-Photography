@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>404 Error></title>
+    <title><% provide(:title, "Page Not Found") %></title>
     <%= stylesheet_link_tag "application", media: "all",
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -13,7 +13,7 @@
     <%= render 'layouts/header' %>
     <div class="container">
       <%= render 'layouts/error' %>
-    	<h1>Page Not Found</h1>
+    	<h1 class="page-title">Page Not Found</h1>
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
