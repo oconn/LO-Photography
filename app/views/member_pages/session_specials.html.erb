@@ -314,14 +314,21 @@
 
 </div>
 
+
 <script type="text/javascript">
-<!--
-    function toggle_visibility(id) {
-       var e = document.getElementById(id);
-       if(e.style.display == 'block')
-          e.style.display = 'none';
-       else
-          e.style.display = 'block';
-    }
-//-->
+	$( "h2.h2-1" ).click(function() {
+    $( "div#toggle1" ).slideToggle( 1000 );
+  });
+  $( "h2.h2-2" ).click(function() {
+    $( "div#toggle2" ).slideToggle( 1000 );
+  });
+  $( "h2.h2-3" ).click(function() {
+    $( "div#toggle3" ).slideToggle( 500 );
+  });
+  $( "h2.h2-4" ).click(function() {
+    $( "div#toggle4" ).slideToggle( 500 );
+  });
+  $( "h2.h2-5" ).click(function() {
+    $( "div#toggle5" ).slideToggle( 1000 );
+  });
 </script>

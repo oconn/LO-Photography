@@ -1,6 +1,8 @@
 <p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
+  <strong><%= comment.user_id %></strong>
+</p>
+<p>
+	<%= comment.body %>
 </p>
 
 <% if current_user && current_user.admin? %>
