@@ -399,6 +399,21 @@ div.pagination {
   font-size: 3em; 
 }
 
+// Social Media
+
+.social-media {
+  list-style: none;
+  position: absolute;
+  left: 0em;
+  li {
+    margin: 0 1em;
+    display: inline-table;
+  }
+  #pin-it {
+    margin-top: -0.4em;
+  }
+}
+
 /* *** Media Queries *** */
 
 /* Small devices (tablets, 768px and up) */
