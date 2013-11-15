@@ -106,7 +106,7 @@ h1.page-title {
 }
 
 .nav>li>a {
-  padding: 10px 13px;
+  padding: 10px 15px;
   font-family: book;
 }
 .navbar-default .navbar-nav>.active>a {
@@ -302,6 +302,10 @@ div.sed {
   display: table;
 }
 
+.btn-center {
+  display: table;
+  margin: 2em auto;
+}
 // Pagination
 
 
@@ -410,11 +414,16 @@ div.pagination {
       }
     }
   }
+  .nav>li>a {
+    padding: 10px 8px;
+    font-family: book;
+  }
   .navbar-nav>li>a {
     padding-top: 25px !important;
     padding-bottom: 25px !important;
     font-size:1.10em;
     letter-spacing: 2px;
+
   }
   .navbar-default .navbar-nav>.active>a,
   .navbar-default .navbar-nav>li>a {

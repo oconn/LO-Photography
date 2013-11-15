@@ -23,8 +23,7 @@
 <% if current_user && current_user.admin? %>
   <%= render "gallery_images/form" %>
 <% end %>
-
-<%= link_to 'Back', galleries_path, class: "btn btn-primary" %>
+<%= link_to 'Back', galleries_path, class: "btn btn-primary btn-center" %>
 
 <script>
 document.getElementById('links').onclick = function (event) {
