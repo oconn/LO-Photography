@@ -393,16 +393,9 @@ div.pagination {
 // Social Media
 
 .social-media {
-  list-style: none;
-  left: 0em;
-  margin: 1em auto 0.5em auto;
-  li {
-    margin: 0 1em;
-    display: inline-table;
-  }
-  #pin-it {
-    margin-top: -0.4em;
-  }
+  display: table;
+  float: left;
+  padding:1em;
 }
 
 /* *** Media Queries *** */
