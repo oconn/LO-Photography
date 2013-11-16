@@ -132,6 +132,18 @@ h1.page-title {
   background-color: #428bca;
 }
 
+.navbar-default .navbar-toggle {
+  background-color: #77B0B1;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #1A6466;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fffabe;
+}
+
 /* *** Footer *** */
 
 
