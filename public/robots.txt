@@ -4,4 +4,4 @@
 # User-agent: *
 # Disallow: /
 
-Sitemap: https://s3.amazonaws.com/lo-photography/sitemaps/sitemap.xml.gz
+Sitemap: https://www.lofirefly.com/sitemap1.xml.gz
