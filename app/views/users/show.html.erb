@@ -19,31 +19,35 @@
 	<% end %>
 </div>
 <% if @user_galleries.blank? %>
-  <h3>Welcome To Firefly Photography!</h3>
-  <p>
-  	Thanks for joining this community of people who value preserving the love 
-  	of family in all seasons of life by putting it on display. If you’re 
-  	joining because you’ve just booked a session, congratulations on taking 
-  	the first step! The rest is a breeze! You now have access to some great 
-  	resources I have for you to help at every stage from planning to hanging 
-  	and enjoying those images on your walls. My goal is to make it as seamless 
-  	and stress-free as possible for you to enjoy a quality, natural, and real 
-  	representation of your loved ones.
-  </p>
-  <p>
-  	This is your personal homepage where you will be able to view the final 
-  	galleries from every shoot you have with Firefly Photography. I will 
-  	upload the images from a given shoot after all the processing and editing 
-  	is finished and you’ve had your final ordering session. The images here 
-  	will high-quality, but will not be suitable for printing. Friends and 
-  	family will be able to view your gallery with a guest login account if 
-  	you wish to set one.
-  </p>
-  <p>
-  	If you haven’t booked a session yet, what are you waiting for!? <%= link_to "Click here", new_inquiry_path %> to 
-  	contact me and get the ball rolling!
-  </p>
-  <p>
-  	~Leah
-  </p>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h3>Welcome To Firefly Photography!</h3>
+      <p>
+      	Thanks for joining this community of people who value preserving the love 
+      	of family in all seasons of life by putting it on display. If you’re 
+      	joining because you’ve just booked a session, congratulations on taking 
+      	the first step! The rest is a breeze! You now have access to some great 
+      	resources I have for you to help at every stage from planning to hanging 
+      	and enjoying those images on your walls. My goal is to make it as seamless 
+      	and stress-free as possible for you to enjoy a quality, natural, and real 
+      	representation of your loved ones.
+      </p>
+      <p>
+      	This is your personal homepage where you will be able to view the final 
+      	galleries from every shoot you have with Firefly Photography. I will 
+      	upload the images from a given shoot after all the processing and editing 
+      	is finished and you’ve had your final ordering session. The images here 
+      	will high-quality, but will not be suitable for printing. Friends and 
+      	family will be able to view your gallery with a guest login account if 
+      	you wish to set one.
+      </p>
+      <p>
+      	If you haven’t booked a session yet, what are you waiting for!? <%= link_to "Click here", new_inquiry_path %> to 
+      	contact me and get the ball rolling!
+      </p>
+      <p>
+      	~Leah
+      </p>
+    </div>
+  </div>
 <% end %>
