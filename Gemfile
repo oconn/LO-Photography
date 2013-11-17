@@ -43,6 +43,8 @@ gem 'newrelic_rpm'
 gem 'sitemap_generator'
 # Fog is the Ruby cloud services library, top to bottom:
 gem 'fog'
+# Fog dependent
+gem 'unf'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
