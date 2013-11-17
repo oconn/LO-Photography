@@ -99,7 +99,4 @@ LoPhoto::Application.configure do
     :domain         => 'heroku.com',
     :enable_starttls_auto => true
   }
-
-  heroku config:set FOG_PROVIDER=AWS
-  heroku config:set FOG_DIRECTORY=AWS_BUCKET
 end
