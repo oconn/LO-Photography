@@ -1,0 +1,49 @@
+.social-media {
+		position: relative;
+	  background-color: pink;
+	  width: 100%;
+	  div {
+      top: 0;
+	  	display: inline-table;
+	  	margin: 0;
+	  	padding: 0;
+	    width: 25%;
+	    float: left;
+	    text-align: center;
+	  }
+	}
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	.social-media {
+		width:50%;
+		margin: 0 auto;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+	.social-media {
+		width: 1px;
+		position: fixed;
+	  left: 0.2em;
+	  top: 40%;
+	  height: auto;
+	  div {
+	  	display: table;
+	  	width:100%;
+	  	margin: 0 auto;
+	  }
+	}
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}
+
+
+

@@ -18,9 +18,9 @@
     <div class="container">
       <%= render 'layouts/error' %>
     	<%= yield %>
+      <%= render 'layouts/social' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>
-  <%= render 'layouts/social' %>
   <%= render 'layouts/footer' %>
 </html>
