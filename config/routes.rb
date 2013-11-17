@@ -32,7 +32,9 @@ LoPhoto::Application.routes.draw do
   match '/display_your_art', to: 'member_pages#display',          via: 'get'
   match '/session_specials', to: 'member_pages#session_specials', via: 'get'
   
-
+  # Sitemap
+  match '/sitemap1.xml.gz' => 'sitemaps#show'
+  
   #http://techoctave.com/c7/posts/36-rails-3-0-rescue-from-routing-error-solution
   match '*a', to: 'errors#routing', via: 'get' 
 

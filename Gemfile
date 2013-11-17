@@ -41,6 +41,8 @@ gem 'jquery-fileupload-rails'
 gem 'newrelic_rpm'
 # Sitemap generator
 gem 'sitemap_generator'
+# Fog is the Ruby cloud services library, top to bottom:
+gem 'fog'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
