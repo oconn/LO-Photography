@@ -9,12 +9,12 @@
 				<%= form_for([@user, @user_gallery, @user_gallery.user_images.build]) do |f| %>
 				  <div class="form-group">
 				    <%= f.label :image, "Image" %>
-				    <%= f.file_field :image %>
+				    <%= f.file_field :image, multiple: true, name: "user_image[image]" %>
 				  </div>
 				  
 				  <div>
-                    <%= f.submit "Submit Image", class: "btn btn-primary" %>
-                  </div>
+            <%= f.submit "Submit Image", class: "btn btn-primary" %>
+          </div>
 				<% end %>
 			</div>
 		</div>
