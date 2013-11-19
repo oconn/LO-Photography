@@ -1,5 +1,6 @@
 class UserGalleriesController < ApplicationController
 	before_filter :verify_is_admin, only: [:new, :create, :edit, :update, :destroy, :index]
+  before_filter :current_user, only: [:show]
 
 	def index
     if current_user.admin?

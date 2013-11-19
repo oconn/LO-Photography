@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :current_user, only: [:show]
 
 	def index
-		@users = User.all.page(params[:page]).per_page(20).order("email ASC")
+		@users = User.all.page(params[:page]).per_page(12).order("last_name ASC")
 	end
 
 	def show 
