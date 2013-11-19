@@ -6,10 +6,10 @@
 	    <div class="form-wrap">
 	      <h2 class="form-title">New Gallery Image</h2>
 
-				<%= form_for([@user, @user_gallery, @user_gallery.user_images.build]) do |f| %>
+				<%= form_for([@user, @user_gallery, @user_gallery.user_images.new]) do |f| %>
 				  <div class="form-group">
 				    <%= f.label :image, "Image" %>
-				    <%= f.file_field :image, multiple: true, name: "user_image[image]" %>
+				    <%= f.file_field :image %>
 				  </div>
 				  
 				  <div>
