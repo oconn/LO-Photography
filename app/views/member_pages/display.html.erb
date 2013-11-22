@@ -1,8 +1,14 @@
 <% provide(:title, "Display Your Art") %>
 <h1 class="page-title">Display Your Art</h1>
 
-<div class="coming-soon">
-  <h2>Coming Soon!</h2>
+<div class="row display-your-art">
+	<div class="col-md-10 col-md-offset-1"><%= image_tag("collect1.jpg", class: "img-responsive") %></div>
+	<div class="col-md-10 col-md-offset-1"><hr class="blog-hr" /></div>
+	<div class="col-md-10 col-md-offset-1"><%= image_tag("collect4.jpg", class: "img-responsive") %></div>
+	<div class="col-md-10 col-md-offset-1"><hr class="blog-hr" /></div>
+	<div class="col-md-10 col-md-offset-1"><%= image_tag("collect2.jpg", class: "img-responsive") %></div>
+	<div class="col-md-10 col-md-offset-1"><hr class="blog-hr" /></div>
+	<div class="col-md-10 col-md-offset-1"><%= image_tag("collect3.jpg", class: "img-responsive") %></div>
 </div>
 
-<%= link_to "Back", toolkit_path, class: "btn btn-primary" %>
+<%= link_to "Back", toolkit_path, class: "btn btn-primary btn-center" %>
