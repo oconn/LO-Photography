@@ -5,6 +5,21 @@ GIT
     database_cleaner (1.2.0)
 
 GIT
+  remote: git://github.com/collectiveidea/delayed_job.git
+  revision: 2f02f64f73499b6f217aab9cbf7e5050a3992c71
+  specs:
+    delayed_job (4.0.0)
+      activesupport (>= 3.0, < 4.1)
+
+GIT
+  remote: git://github.com/collectiveidea/delayed_job_active_record.git
+  revision: 711f08d9ad4388086840c5205784a3b2adb49e21
+  specs:
+    delayed_job_active_record (4.0.0)
+      activerecord (>= 3.0, < 4.1)
+      delayed_job (>= 3.0, < 4.1)
+
+GIT
   remote: git://github.com/sporkrb/spork-rails.git
   revision: 0dd45e59d3237b4c8f9efc215b46d9c07072a95e
   specs:
@@ -316,6 +331,8 @@ DEPENDENCIES
   cucumber-rails (= 1.4.0)
   database_cleaner!
   debugger
+  delayed_job!
+  delayed_job_active_record!
   devise (~> 3.1.0)
   factory_girl_rails (= 4.2.0)
   fog

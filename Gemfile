@@ -45,6 +45,9 @@ gem 'sitemap_generator'
 gem 'fog'
 # Fog dependent
 gem 'unf'
+# Runs jobs in background
+gem 'delayed_job', git: 'git://github.com/collectiveidea/delayed_job.git'
+gem 'delayed_job_active_record', git: 'git://github.com/collectiveidea/delayed_job_active_record.git'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
